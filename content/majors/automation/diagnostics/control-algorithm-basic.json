@@ -1,0 +1,76 @@
+{
+  "id": "control-algorithm-basic",
+  "majorId": "automation",
+  "jobId": "control-algorithm-engineer",
+  "title": "控制算法工程师基础诊断",
+  "questions": [
+    {
+      "id": "q1",
+      "abilityId": "system-modeling",
+      "prompt": "一阶惯性环节的时间常数主要影响什么？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "响应速度" },
+        { "id": "b", "text": "采样频率单位" },
+        { "id": "c", "text": "传感器颜色" }
+      ],
+      "answer": "a",
+      "explanation": "时间常数越大，典型响应越慢。"
+    },
+    {
+      "id": "q2",
+      "abilityId": "controller-design",
+      "prompt": "PID 中的积分环节常用于减小稳态误差。",
+      "type": "true-false",
+      "options": [
+        { "id": "true", "text": "正确" },
+        { "id": "false", "text": "错误" }
+      ],
+      "answer": "true",
+      "explanation": "积分作用可累积误差并改善稳态误差。"
+    },
+    {
+      "id": "q3",
+      "abilityId": "simulation-validation",
+      "prompt": "比较控制方案时只看最终稳态值即可，不需要看超调和调节时间。",
+      "type": "true-false",
+      "options": [
+        { "id": "true", "text": "正确" },
+        { "id": "false", "text": "错误" }
+      ],
+      "answer": "false",
+      "explanation": "超调、调节时间和稳态误差都影响工程可用性。"
+    },
+    {
+      "id": "q4",
+      "abilityId": "engineering-communication",
+      "prompt": "工程报告中最需要保留哪类信息？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "设计依据、参数和验证结果" },
+        { "id": "b", "text": "只写最终结论" },
+        { "id": "c", "text": "只写软件截图" }
+      ],
+      "answer": "a",
+      "explanation": "工程表达需要可追溯证据。"
+    },
+    {
+      "id": "q5",
+      "abilityId": "controller-design",
+      "prompt": "控制器参数整定需要结合性能目标和对象特性。",
+      "type": "true-false",
+      "options": [
+        { "id": "true", "text": "正确" },
+        { "id": "false", "text": "错误" }
+      ],
+      "answer": "true",
+      "explanation": "参数整定必须服务于具体对象和性能目标。"
+    }
+  ],
+  "scoringRules": [
+    { "abilityId": "system-modeling", "weakBelow": 1, "feedback": "需要复习一阶系统建模和响应参数。" },
+    { "abilityId": "controller-design", "weakBelow": 2, "feedback": "需要补充 PID 参数作用和性能指标关系。" },
+    { "abilityId": "simulation-validation", "weakBelow": 1, "feedback": "需要练习从响应曲线提取性能指标。" },
+    { "abilityId": "engineering-communication", "weakBelow": 1, "feedback": "需要训练报告证据组织。" }
+  ]
+}

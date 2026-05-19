@@ -1,0 +1,20 @@
+{
+  "id": "ability-id",
+  "majorId": "major-id",
+  "jobId": "job-id",
+  "name": "能力名称",
+  "level": "basic",
+  "description": "能力说明",
+  "knowledgePoints": ["知识点"],
+  "skillPoints": ["技能点"],
+  "relatedCourses": ["支撑课程"],
+  "prerequisites": [],
+  "evidenceExamples": ["证据样例"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "来源名称",
+      "note": "如果是模拟数据，必须说明。"
+    }
+  ]
+}

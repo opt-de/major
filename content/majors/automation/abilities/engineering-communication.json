@@ -1,0 +1,20 @@
+{
+  "id": "engineering-communication",
+  "majorId": "automation",
+  "jobId": "control-algorithm-engineer",
+  "name": "工程表达能力",
+  "level": "basic",
+  "description": "用清晰证据说明控制方案、测试过程和工程取舍。",
+  "knowledgePoints": ["工程报告结构", "指标解释", "风险说明"],
+  "skillPoints": ["整理设计依据", "绘制结果表格", "表达限制条件"],
+  "relatedCourses": ["自动控制原理", "工程实践训练"],
+  "prerequisites": [],
+  "evidenceExamples": ["提交结构化设计报告", "说明方案的适用条件和风险"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "工程表达能力模拟节点",
+      "note": "第一期演示能力节点。"
+    }
+  ]
+}

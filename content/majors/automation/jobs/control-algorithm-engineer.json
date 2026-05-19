@@ -1,0 +1,16 @@
+{
+  "id": "control-algorithm-engineer",
+  "majorId": "automation",
+  "name": "控制算法工程师",
+  "description": "面向工业对象、装备系统和智能设备，完成控制对象建模、控制器设计、仿真验证和工程表达。",
+  "workScenarios": ["温度、压力、速度等过程变量闭环控制", "控制方案参数整定与仿真对比", "算法说明、测试记录和工程报告编写"],
+  "typicalTasks": ["建立被控对象近似模型", "设计 PID 或基础补偿控制方案", "使用 MATLAB 或 Python 完成仿真验证", "解释控制性能指标与工程约束"],
+  "abilityIds": ["system-modeling", "controller-design", "simulation-validation", "engineering-communication"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "控制算法工程师岗位模拟描述",
+      "note": "用于第一期闭环演示，不代表真实招聘数据。"
+    }
+  ]
+}

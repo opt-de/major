@@ -1,0 +1,13 @@
+{
+  "id": "python-simulation",
+  "title": "Python 控制仿真入门",
+  "type": "tool",
+  "description": "用于完成响应曲线计算、参数扫描和结果记录的仿真工具学习资源。",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "仿真工具模拟资源",
+      "note": "第一期仅作为学习路径资源占位。"
+    }
+  ]
+}
