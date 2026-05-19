@@ -9,6 +9,7 @@ out/
 dist/
 build/
 coverage/
+*.tsbuildinfo
 
 # local environment
 .env
@@ -30,3 +31,9 @@ pnpm-debug.log*
 # deployment caches
 .vercel/
 .turbo/
+
+# local agent state
+.codex/
+
+# code review graph local database and logs
+.code-review-graph/

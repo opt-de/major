@@ -1,0 +1,17 @@
+name: Workflow Practice
+description: GitHub 协作训练任务
+title: "[Workflow] "
+labels: ["type: workflow", "status: ready"]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: 训练任务
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 需要提交的证据
+    validations:
+      required: true

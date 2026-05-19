@@ -1,0 +1,42 @@
+name: Content Pack
+description: 新增或完善专业、岗位、能力、任务、诊断题等内容包
+title: "[Content] "
+labels: ["type: content-pack", "status: ready"]
+body:
+  - type: dropdown
+    id: content_type
+    attributes:
+      label: 内容类型
+      options:
+        - 专业 major
+        - 岗位 job
+        - 能力 ability
+        - 学习任务 task
+        - 诊断题 diagnostic
+        - 学习路径 learning-path
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: 目标对象
+      description: 例如：自动化 / 控制算法工程师 / 控制器设计能力
+    validations:
+      required: true
+  - type: textarea
+    id: work
+    attributes:
+      label: 任务说明
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 验收标准
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 内容来源
+      description: 请说明教材、课程大纲、公开资料、教师访谈或 Mock 数据。

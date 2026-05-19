@@ -1,0 +1,23 @@
+name: Bug
+description: 报告页面、内容校验、Agent 或 CI 问题
+title: "[Bug] "
+labels: ["type: bug", "status: ready"]
+body:
+  - type: textarea
+    id: symptom
+    attributes:
+      label: 现象
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
