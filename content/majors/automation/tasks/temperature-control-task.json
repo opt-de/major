@@ -1,0 +1,32 @@
+{
+  "id": "temperature-control-task",
+  "majorId": "automation",
+  "jobId": "control-algorithm-engineer",
+  "abilityIds": ["system-modeling", "controller-design", "simulation-validation", "engineering-communication"],
+  "title": "为温控对象设计闭环控制方案",
+  "scenario": "某实验装置需要把温度稳定在目标值附近。学习者需要建立简化模型，设计基础控制器，并用仿真结果说明方案是否可用。",
+  "objectives": ["识别温控对象输入输出变量", "建立一阶惯性近似模型", "设计 PID 控制方案", "用仿真结果说明控制效果"],
+  "steps": ["整理对象假设和性能目标", "建立传递函数或离散仿真模型", "整定控制参数并记录依据", "生成响应曲线和指标表", "撰写方案说明"],
+  "deliverables": ["模型说明", "控制参数表", "仿真曲线", "项目报告"],
+  "rubric": [
+    {
+      "criterion": "模型合理性",
+      "description": "模型能解释主要输入输出关系，并说明适用边界。",
+      "levels": ["需补充变量定义", "模型可用于基础仿真", "模型说明清晰且边界明确"]
+    },
+    {
+      "criterion": "控制方案",
+      "description": "控制器参数和性能指标之间存在可解释关系。",
+      "levels": ["参数缺少依据", "参数能满足基本目标", "参数比较充分且取舍清楚"]
+    }
+  ],
+  "safetyOrEthicsNotes": ["本任务使用模拟对象，不使用真实设备危险工况数据。", "报告中必须标注 Mock 数据来源。"],
+  "estimatedTime": "4-6 小时",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "温控闭环任务模拟数据",
+      "note": "第一期用于演示任务生成闭环。"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "controller-design",
+  "majorId": "automation",
+  "jobId": "control-algorithm-engineer",
+  "name": "控制器设计能力",
+  "level": "intermediate",
+  "description": "根据性能目标选择控制策略并完成基础参数设计。",
+  "knowledgePoints": ["PID 控制", "稳态误差", "超调量", "调节时间"],
+  "skillPoints": ["选择控制结构", "整定控制参数", "比较控制效果"],
+  "relatedCourses": ["自动控制原理", "现代控制理论"],
+  "prerequisites": ["控制系统建模"],
+  "evidenceExamples": ["完成温控对象闭环控制方案", "说明参数变化对超调和调节时间的影响"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "控制器设计能力模拟节点",
+      "note": "第一期演示能力节点。"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "control-algorithm-beginner",
+  "majorId": "automation",
+  "jobId": "control-algorithm-engineer",
+  "title": "控制算法工程师入门路径",
+  "targetLevel": "starter",
+  "nodes": [
+    {
+      "id": "math-foundation",
+      "title": "数学与模型基础",
+      "abilityIds": ["system-modeling"],
+      "resourceIds": ["automatic-control-principle", "python-simulation"],
+      "expectedOutcome": "能解释一阶模型参数和响应曲线之间的关系。"
+    },
+    {
+      "id": "controller-practice",
+      "title": "PID 设计与仿真",
+      "abilityIds": ["controller-design", "simulation-validation"],
+      "resourceIds": ["automatic-control-principle", "python-simulation"],
+      "expectedOutcome": "能完成基础闭环方案并给出仿真证据。"
+    },
+    {
+      "id": "reporting",
+      "title": "项目报告表达",
+      "abilityIds": ["engineering-communication"],
+      "resourceIds": ["project-report-template"],
+      "expectedOutcome": "能用模型、参数、曲线和结论组成完整报告。"
+    }
+  ]
+}

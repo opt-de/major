@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+. "$(dirname "$0")/crg-hook-lib.sh"
+run_crg_nonblocking "post-rewrite build" build
+exit 0

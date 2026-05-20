@@ -1,0 +1,16 @@
+{
+  "id": "job-id",
+  "majorId": "major-id",
+  "name": "岗位名称",
+  "description": "岗位说明",
+  "workScenarios": ["工作场景"],
+  "typicalTasks": ["典型任务"],
+  "abilityIds": ["ability-id"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "来源名称",
+      "note": "如果是模拟数据，必须说明。"
+    }
+  ]
+}

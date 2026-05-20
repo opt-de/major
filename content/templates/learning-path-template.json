@@ -1,0 +1,16 @@
+{
+  "id": "learning-path-id",
+  "majorId": "major-id",
+  "jobId": "job-id",
+  "title": "学习路径标题",
+  "targetLevel": "starter",
+  "nodes": [
+    {
+      "id": "node-id",
+      "title": "节点标题",
+      "abilityIds": ["ability-id"],
+      "resourceIds": ["resource-id"],
+      "expectedOutcome": "预期结果"
+    }
+  ]
+}

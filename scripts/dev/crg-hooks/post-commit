@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+. "$(dirname "$0")/crg-hook-lib.sh"
+run_crg_nonblocking "post-commit update" update
+exit 0

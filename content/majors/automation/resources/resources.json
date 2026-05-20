@@ -1,0 +1,13 @@
+{
+  "id": "automatic-control-principle",
+  "title": "自动控制原理课程材料",
+  "type": "course",
+  "description": "用于支撑建模、PID 控制和闭环性能指标学习的课程材料占位。",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "课程资源模拟条目",
+      "note": "第一期仅登记资源类型，不指向真实课程文件。"
+    }
+  ]
+}

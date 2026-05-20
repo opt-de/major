@@ -1,0 +1,13 @@
+{
+  "id": "project-report-template",
+  "title": "控制方案项目报告模板",
+  "type": "project",
+  "description": "用于组织对象描述、模型假设、控制参数、仿真结果和工程结论。",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "报告模板模拟资源",
+      "note": "第一期仅作为工程表达资源占位。"
+    }
+  ]
+}

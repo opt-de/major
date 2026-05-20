@@ -1,0 +1,27 @@
+{
+  "id": "task-id",
+  "majorId": "major-id",
+  "jobId": "job-id",
+  "abilityIds": ["ability-id"],
+  "title": "任务标题",
+  "scenario": "任务情境",
+  "objectives": ["任务目标"],
+  "steps": ["任务步骤"],
+  "deliverables": ["交付物"],
+  "rubric": [
+    {
+      "criterion": "评价维度",
+      "description": "评价说明",
+      "levels": ["基础", "合格", "优秀"]
+    }
+  ],
+  "safetyOrEthicsNotes": ["安全或伦理说明"],
+  "estimatedTime": "预计耗时",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "来源名称",
+      "note": "如果是模拟数据，必须说明。"
+    }
+  ]
+}
