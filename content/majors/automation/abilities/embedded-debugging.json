@@ -1,0 +1,36 @@
+{
+  "id": "embedded-debugging",
+  "majorId": "automation",
+  "jobId": "embedded-software-engineer",
+  "name": "嵌入式调试与测试",
+  "level": "intermediate",
+  "description": "使用专业调试工具和方法对嵌入式系统进行在线调试、日志分析和边界测试，定位并修复软硬件缺陷。",
+  "knowledgePoints": [
+    "JTAG/SWD 调试接口原理",
+    "断点、单步执行与变量观察",
+    "printf 日志与 SWO 跟踪",
+    "边界值分析与等价类划分",
+    "看门狗与异常复位分析"
+  ],
+  "skillPoints": [
+    "使用 J-Link 或 ST-Link 进行在线调试",
+    "设置硬件断点并观察外设寄存器变化",
+    "通过日志输出定位 HardFault 异常原因",
+    "编写单元测试覆盖边界条件",
+    "分析复位日志并确定故障来源"
+  ],
+  "relatedCourses": ["嵌入式系统基础", "软件工程测试技术", "微机原理与接口技术"],
+  "prerequisites": ["嵌入式 C 编程", "接口与通信协议"],
+  "evidenceExamples": [
+    "使用调试器定位并修复一个 HardFault 异常",
+    "提交边界测试报告，覆盖传感器输入的极值和异常值",
+    "通过 SWO 跟踪输出实时任务切换日志"
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "嵌入式调试与测试能力模拟节点",
+      "note": "第一期演示能力节点，不代表真实课程数据。"
+    }
+  ]
+}

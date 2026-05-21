@@ -1,0 +1,36 @@
+{
+  "id": "embedded-interface-comm",
+  "majorId": "automation",
+  "jobId": "embedded-software-engineer",
+  "name": "接口与通信协议",
+  "level": "basic",
+  "description": "掌握嵌入式系统中常用的串行通信接口和总线协议，能完成接口配置、数据收发和协议分析。",
+  "knowledgePoints": [
+    "UART 异步串行通信原理",
+    "SPI 主从模式与时序",
+    "I2C 地址寻址与仲裁机制",
+    "CAN 总线帧格式与错误处理",
+    "通信速率、校验与流控概念"
+  ],
+  "skillPoints": [
+    "配置 UART 波特率并实现数据收发",
+    "使用 SPI 驱动 Flash 或传感器外设",
+    "通过 I2C 读取温湿度传感器数据",
+    "使用 CAN 分析仪捕获并解析总线报文",
+    "排查通信时序不匹配问题"
+  ],
+  "relatedCourses": ["微机原理与接口技术", "现场总线技术", "嵌入式系统基础"],
+  "prerequisites": ["嵌入式 C 编程"],
+  "evidenceExamples": [
+    "完成 UART 与 PC 的双向通信实验",
+    "使用 SPI 读取 Flash ID 并验证数据正确性",
+    "搭建双节点 CAN 通信测试并提交报文分析报告"
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "接口与通信协议能力模拟节点",
+      "note": "第一期演示能力节点，不代表真实课程数据。"
+    }
+  ]
+}

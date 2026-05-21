@@ -1,0 +1,33 @@
+{
+  "id": "embedded-software-engineer",
+  "majorId": "automation",
+  "name": "嵌入式软件工程师",
+  "description": "面向微控制器、SoC 和智能硬件平台，完成嵌入式系统软件的需求分析、架构设计、编码实现、调试测试和固件维护。",
+  "workScenarios": [
+    "基于 ARM Cortex-M 系列微控制器开发产品固件",
+    "为传感器、通信模块等外设编写驱动程序",
+    "在 FreeRTOS 等实时操作系统上开发多任务应用",
+    "通过 JTAG/SWD 调试器进行在线调试和性能优化",
+    "参与产品固件 OTA 升级方案设计与实现"
+  ],
+  "typicalTasks": [
+    "根据硬件原理图编写外设驱动（GPIO、UART、SPI、I2C）",
+    "基于 RTOS 划分任务并实现任务间同步与通信",
+    "使用调试工具定位 HardFault、死锁等异常",
+    "编写单元测试和集成测试，覆盖边界条件",
+    "编写技术文档，包括接口说明、调试记录和版本日志"
+  ],
+  "abilityIds": [
+    "embedded-c-programming",
+    "embedded-interface-comm",
+    "embedded-debugging",
+    "embedded-system-design"
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "嵌入式软件工程师岗位模拟描述",
+      "note": "用于第一期闭环演示，不代表真实招聘数据。"
+    }
+  ]
+}

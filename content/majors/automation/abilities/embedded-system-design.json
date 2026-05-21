@@ -1,0 +1,36 @@
+{
+  "id": "embedded-system-design",
+  "majorId": "automation",
+  "jobId": "embedded-software-engineer",
+  "name": "嵌入式系统设计",
+  "level": "advanced",
+  "description": "基于微控制器或 SoC 进行嵌入式系统软硬件总体设计，包括 RTOS 任务划分、低功耗策略和系统架构选型。",
+  "knowledgePoints": [
+    "RTOS 任务调度与优先级抢占",
+    "信号量、消息队列与事件标志组",
+    "低功耗模式与唤醒机制",
+    "Bootloader 与固件升级原理",
+    "系统架构分层与模块解耦"
+  ],
+  "skillPoints": [
+    "使用 FreeRTOS 创建多任务应用",
+    "通过消息队列实现任务间通信",
+    "设计低功耗策略并测量功耗变化",
+    "编写 Bootloader 实现固件 OTA 升级",
+    "绘制系统架构图并说明模块接口"
+  ],
+  "relatedCourses": ["嵌入式操作系统", "嵌入式系统基础", "自动控制原理"],
+  "prerequisites": ["嵌入式 C 编程", "接口与通信协议", "嵌入式调试与测试"],
+  "evidenceExamples": [
+    "完成基于 FreeRTOS 的多任务数据采集系统",
+    "提交低功耗优化报告，对比优化前后的电流消耗",
+    "设计并实现一个支持 OTA 升级的固件架构"
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "嵌入式系统设计能力模拟节点",
+      "note": "第一期演示能力节点，不代表真实课程数据。"
+    }
+  ]
+}
