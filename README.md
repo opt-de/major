@@ -17,7 +17,10 @@ npm run typecheck
 npm run lint
 npm run test
 npm run build
+npm run check
 ```
+
+`npm run check` 与 CI 的主检查链路一致，会依次运行 typecheck、内容校验、lint、test 和 build。
 
 ## 协作者工具链
 
@@ -73,10 +76,32 @@ scripts/dev/install-crg-hooks.sh --check
 1. 从 `integration` 拉取最新代码。
 2. 创建 `feature/issue-编号-简短名称` 分支。
 3. 修改内容包、页面、脚本或文档。
-4. 运行 `npm run validate-content`、`npm run typecheck`、`npm run lint`、`npm run build`。
+4. 本地运行检查。
 5. 提交 PR 到 `integration`。
 6. 根据 review 修改。
 7. 合并后在 `content/contributors/contributors.json` 中登记贡献。
+
+### 提交前检查
+
+所有 PR 提交前应运行：
+
+```bash
+npm run check
+```
+
+该命令覆盖 CI 的完整门禁：`typecheck`、`validate-content`、`lint`、`test`、`build`。如果本机使用 `rtk`，对应命令是：
+
+```bash
+rtk npm run check
+```
+
+调试阶段可以按贡献类型先跑更小范围的命令：
+
+- 内容包 PR：先运行 `npm run validate-content`，再运行 `npm run test`。
+- UI、Agent 或代码 PR：运行 `npm run typecheck`、`npm run lint`、`npm run test` 和 `npm run build`。
+- 文档 PR：至少运行 `npm run lint`；如果改动影响脚本、配置或示例数据，仍需运行 `npm run check`。
+
+不要只运行 PR 模板中的部分命令后就提交。CI 会执行完整检查，尤其包括 `npm run test`。
 
 ## 数据原则
 
