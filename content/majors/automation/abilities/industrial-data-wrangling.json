@@ -1,0 +1,20 @@
+{
+  "id": "industrial-data-wrangling",
+  "majorId": "automation",
+  "jobId": "industrial-data-analyst",
+  "name": "工业数据采集与预处理",
+  "level": "basic",
+  "description": "掌握工业现场传感器数据类型与采集方式，能够对原始数据进行清洗、对齐和特征提取。",
+  "knowledgePoints": ["传感器数据类型与采样频率", "数据清洗方法（去重、滤波、归一化）", "缺失值处理策略", "时序数据对齐与重采样"],
+  "skillPoints": ["使用 Pandas 加载 CSV 和日志文件", "识别并标记异常值与缺失值", "合并多源传感器数据并时间对齐"],
+  "relatedCourses": ["传感器与检测技术", "数据结构与数据库基础"],
+  "prerequisites": ["Python 编程基础"],
+  "evidenceExamples": ["完成一份传感器日志的数据清洗报告", "实现多源数据的时间对齐脚本"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "工业数据采集与预处理能力模拟节点",
+      "note": "用于第一期学生协作训练，模拟工业数据场景。"
+    }
+  ]
+}

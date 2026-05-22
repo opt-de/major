@@ -1,0 +1,20 @@
+{
+  "id": "data-visualization-communication",
+  "majorId": "automation",
+  "jobId": "industrial-data-analyst",
+  "name": "工业数据可视化与工程沟通",
+  "level": "basic",
+  "description": "使用可视化工具将工业数据分析结果转化为清晰、可决策的工程表达。",
+  "knowledgePoints": ["可视化图表类型及应用场景", "仪表盘设计原则", "工程报告结构与规范", "数据故事叙述方法"],
+  "skillPoints": ["使用 Matplotlib / Seaborn 绘制专业统计图表", "制作数据看板展示关键指标", "撰写面向工程团队的简明数据分析报告"],
+  "relatedCourses": ["工程实践训练", "数据可视化"],
+  "prerequisites": ["Python 编程基础"],
+  "evidenceExamples": ["制作一个传感器监控数据看板", "撰写一份包含图表和分析结论的工程报告"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "工业数据可视化与工程沟通能力模拟节点",
+      "note": "用于第一期学生协作训练，模拟工业报告场景。"
+    }
+  ]
+}
