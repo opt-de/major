@@ -4,7 +4,7 @@
   "category": "工学",
   "description": "围绕自动控制、智能系统、工业过程与装备自动化培养工程技术人才。",
   "targetStudents": ["自动化专业本科生", "控制类方向学生"],
-  "relatedJobs": ["control-algorithm-engineer", "embedded-software-engineer"],
+  "relatedJobs": ["control-algorithm-engineer", "embedded-software-engineer", "robot-engineer"],
   "coreCourses": ["自动控制原理", "现代控制理论", "过程控制", "传感器与检测技术"],
   "sourceRefs": [
     {

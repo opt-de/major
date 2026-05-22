@@ -1,0 +1,20 @@
+{
+  "id": "robot-sensor-integration",
+  "majorId": "automation",
+  "jobId": "robot-engineer",
+  "name": "机器人传感器集成",
+  "level": "basic",
+  "description": "集成力传感器、视觉传感器和惯性测量单元，完成数据采集、滤波与状态感知。",
+  "knowledgePoints": ["力/力矩传感器", "视觉标定", "IMU 数据融合"],
+  "skillPoints": ["配置传感器驱动", "标定视觉系统", "处理传感器噪声"],
+  "relatedCourses": ["传感器与检测技术", "机器人学基础"],
+  "prerequisites": ["基本编程能力"],
+  "evidenceExamples": ["完成手眼标定", "输出传感器滤波前后的数据对比"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "机器人传感器集成能力模拟节点",
+      "note": "第一期演示能力节点。"
+    }
+  ]
+}
