@@ -1,0 +1,37 @@
+{
+  "id": "backend-dev-starter",
+  "majorId": "software-engineering",
+  "jobId": "backend-dev-engineer",
+  "title": "后端开发工程师入门路径",
+  "targetLevel": "starter",
+  "nodes": [
+    {
+      "id": "programming-foundation",
+      "title": "编程与数据结构基础",
+      "abilityIds": ["api-design"],
+      "resourceIds": ["data-structure-course"],
+      "expectedOutcome": "能使用主流编程语言实现基本数据结构和 HTTP 请求处理。"
+    },
+    {
+      "id": "database-practice",
+      "title": "数据库设计与 SQL 实践",
+      "abilityIds": ["database-design"],
+      "resourceIds": ["database-system-course"],
+      "expectedOutcome": "能为业务场景设计合理的表结构并编写高效查询。"
+    },
+    {
+      "id": "testing-practice",
+      "title": "测试与质量保障入门",
+      "abilityIds": ["testing-quality"],
+      "resourceIds": ["software-testing-guide"],
+      "expectedOutcome": "能为关键业务逻辑编写单元测试并理解测试覆盖率。"
+    },
+    {
+      "id": "dev-ops-intro",
+      "title": "Git 协作与 CI/CD 入门",
+      "abilityIds": ["dev-ops-basics"],
+      "resourceIds": ["git-workflow-guide"],
+      "expectedOutcome": "能使用 Git 完成团队协作流程并配置基础 CI 流水线。"
+    }
+  ]
+}

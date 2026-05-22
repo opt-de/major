@@ -1,0 +1,13 @@
+{
+  "id": "git-workflow-guide",
+  "title": "Git 协作工作流指南",
+  "type": "article",
+  "description": "介绍 Git 分支策略、PR 工作流和 CI/CD 基础配置的协作指南。",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "Git 工作流模拟条目",
+      "note": "第一期仅登记资源类型，不指向真实文章。"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "software-testing-guide",
+  "title": "软件测试指南",
+  "type": "article",
+  "description": "介绍软件测试基础、测试金字塔、单元测试编写方法和 Mock 使用场景的指南。",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "测试指南模拟条目",
+      "note": "第一期仅登记资源类型，不指向真实文章。"
+    }
+  ]
+}

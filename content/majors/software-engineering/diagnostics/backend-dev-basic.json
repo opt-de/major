@@ -1,0 +1,106 @@
+{
+  "id": "backend-dev-basic",
+  "majorId": "software-engineering",
+  "jobId": "backend-dev-engineer",
+  "title": "后端开发工程师基础诊断",
+  "questions": [
+    {
+      "id": "q1",
+      "abilityId": "api-design",
+      "prompt": "RESTful API 中，更新一个已有资源通常使用哪个 HTTP 方法？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "GET" },
+        { "id": "b", "text": "POST" },
+        { "id": "c", "text": "PUT" },
+        { "id": "d", "text": "DELETE" }
+      ],
+      "answer": "c",
+      "explanation": "PUT 用于更新已有资源的完整表示，符合 RESTful 规范。"
+    },
+    {
+      "id": "q2",
+      "abilityId": "database-design",
+      "prompt": "数据库索引一定会加快查询速度，因此应该为所有字段都创建索引。",
+      "type": "true-false",
+      "options": [
+        { "id": "true", "text": "正确" },
+        { "id": "false", "text": "错误" }
+      ],
+      "answer": "false",
+      "explanation": "索引虽然能加速查询，但会占用存储空间并降低写入速度，需要根据实际查询模式合理设计。"
+    },
+    {
+      "id": "q3",
+      "abilityId": "testing-quality",
+      "prompt": "单元测试主要验证的是什么？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "整个系统的端到端流程" },
+        { "id": "b", "text": "单个函数或模块的行为是否符合预期" },
+        { "id": "c", "text": "用户界面是否美观" },
+        { "id": "d", "text": "服务器硬件性能" }
+      ],
+      "answer": "b",
+      "explanation": "单元测试聚焦于验证最小代码单元（函数/模块）的行为正确性。"
+    },
+    {
+      "id": "q4",
+      "abilityId": "dev-ops-basics",
+      "prompt": "Git 工作流中，feature 分支的作用是什么？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "用于直接发布到生产环境" },
+        { "id": "b", "text": "用于开发新功能，完成后通过 PR 合并到主分支" },
+        { "id": "c", "text": "用于存储数据库备份" }
+      ],
+      "answer": "b",
+      "explanation": "feature 分支用于隔离新功能开发，完成后通过 Pull Request 进行代码审查和合并。"
+    },
+    {
+      "id": "q5",
+      "abilityId": "database-design",
+      "prompt": "数据库事务的 ACID 特性中，'原子性'是指什么？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "事务中的所有操作要么全部成功，要么全部回滚" },
+        { "id": "b", "text": "数据库使用原子存储结构" },
+        { "id": "c", "text": "事务执行速度极快" }
+      ],
+      "answer": "a",
+      "explanation": "原子性保证事务是不可分割的最小单元，要么全部提交成功，要么全部回滚。"
+    },
+    {
+      "id": "q6",
+      "abilityId": "api-design",
+      "prompt": "HTTP 状态码 401 和 403 的区别是什么？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "没有区别，可以互换使用" },
+        { "id": "b", "text": "401 表示未认证，403 表示已认证但无权限" },
+        { "id": "c", "text": "401 是服务器错误，403 是客户端错误" }
+      ],
+      "answer": "b",
+      "explanation": "401 Unauthorized 表示用户未认证（需要登录），403 Forbidden 表示用户已认证但没有访问权限。"
+    },
+    {
+      "id": "q7",
+      "abilityId": "testing-quality",
+      "prompt": "Mock 对象在测试中的主要作用是？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "替代被测模块，模拟外部依赖的行为" },
+        { "id": "b", "text": "生成随机测试数据" },
+        { "id": "c", "text": "自动修复代码错误" }
+      ],
+      "answer": "a",
+      "explanation": "Mock 对象用于模拟外部依赖（如数据库、API），使测试聚焦于被测单元本身。"
+    }
+  ],
+  "scoringRules": [
+    { "abilityId": "api-design", "weakBelow": 2, "feedback": "需要复习 RESTful API 设计原则和 HTTP 状态码含义。" },
+    { "abilityId": "database-design", "weakBelow": 2, "feedback": "需要加强数据库范式、索引和事务 ACID 特性的理解。" },
+    { "abilityId": "testing-quality", "weakBelow": 2, "feedback": "需要学习单元测试编写方法和 Mock 对象使用场景。" },
+    { "abilityId": "dev-ops-basics", "weakBelow": 1, "feedback": "需要了解 Git 分支策略和 CI/CD 基本概念。" }
+  ]
+}

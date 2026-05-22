@@ -1,0 +1,16 @@
+{
+  "id": "software-engineering",
+  "name": "软件工程",
+  "category": "工学",
+  "description": "围绕软件系统的分析、设计、开发、测试与运维全生命周期，培养具备工程化思维和团队协作能力的软件工程师。",
+  "targetStudents": ["软件工程专业本科生", "计算机类方向学生"],
+  "relatedJobs": ["backend-dev-engineer"],
+  "coreCourses": ["数据结构与算法", "软件工程导论", "数据库系统", "计算机网络", "操作系统"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "软件工程专业培养方案模拟数据",
+      "note": "第一期使用模拟数据，后续替换为真实脱敏材料。"
+    }
+  ]
+}

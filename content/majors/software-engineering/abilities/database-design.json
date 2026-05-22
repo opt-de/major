@@ -1,0 +1,32 @@
+{
+  "id": "database-design",
+  "majorId": "software-engineering",
+  "jobId": "backend-dev-engineer",
+  "name": "数据库设计能力",
+  "level": "intermediate",
+  "description": "根据业务需求设计关系型数据库表结构，编写高效 SQL 查询，理解索引、事务和数据一致性。",
+  "knowledgePoints": [
+    "关系模型与 ER 图",
+    "数据库范式（1NF/2NF/3NF）",
+    "索引原理与使用",
+    "事务 ACID 特性"
+  ],
+  "skillPoints": [
+    "绘制 ER 图并转化为表结构",
+    "编写多表连接查询",
+    "设计合理的索引策略"
+  ],
+  "relatedCourses": ["数据库系统", "数据结构与算法"],
+  "prerequisites": ["SQL 基础语法"],
+  "evidenceExamples": [
+    "为博客系统设计完整的数据库表结构",
+    "编写包含事务处理的订单创建 SQL"
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "数据库设计能力模拟节点",
+      "note": "第一期演示能力节点。"
+    }
+  ]
+}

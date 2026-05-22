@@ -1,0 +1,32 @@
+{
+  "id": "backend-dev-engineer",
+  "majorId": "software-engineering",
+  "name": "后端开发工程师",
+  "description": "负责服务端应用的设计、开发、测试与维护，构建高可用、可扩展的后端系统，支撑业务数据处理与接口服务。",
+  "workScenarios": [
+    "根据业务需求设计 RESTful API 接口并实现服务端逻辑",
+    "设计数据库表结构，编写高效查询语句，保证数据一致性",
+    "排查线上服务性能瓶颈，进行接口响应优化",
+    "编写单元测试和集成测试，保障代码质量"
+  ],
+  "typicalTasks": [
+    "分析需求文档，设计接口协议和数据模型",
+    "使用 Java/Go/Python 等语言实现业务逻辑",
+    "编写数据库迁移脚本和查询优化",
+    "配置 CI/CD 流水线，完成服务部署",
+    "编写技术文档和接口说明"
+  ],
+  "abilityIds": [
+    "api-design",
+    "database-design",
+    "testing-quality",
+    "dev-ops-basics"
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "后端开发工程师岗位模拟描述",
+      "note": "用于第一期闭环演示，不代表真实招聘数据。"
+    }
+  ]
+}

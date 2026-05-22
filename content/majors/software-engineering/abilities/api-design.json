@@ -1,0 +1,32 @@
+{
+  "id": "api-design",
+  "majorId": "software-engineering",
+  "jobId": "backend-dev-engineer",
+  "name": "API 接口设计能力",
+  "level": "intermediate",
+  "description": "根据业务需求设计规范的 RESTful API 接口，包括资源命名、请求方法、状态码和错误处理。",
+  "knowledgePoints": [
+    "RESTful 设计原则",
+    "HTTP 方法与状态码",
+    "接口版本管理",
+    "请求参数校验"
+  ],
+  "skillPoints": [
+    "设计符合规范的 API 端点",
+    "编写接口文档",
+    "处理边界条件和错误响应"
+  ],
+  "relatedCourses": ["计算机网络", "软件工程导论"],
+  "prerequisites": ["HTTP 协议基础"],
+  "evidenceExamples": [
+    "完成一套用户管理模块的 RESTful API 设计文档",
+    "说明不同状态码的使用场景"
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "API 设计能力模拟节点",
+      "note": "第一期演示能力节点。"
+    }
+  ]
+}

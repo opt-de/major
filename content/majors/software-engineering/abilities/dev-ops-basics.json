@@ -1,0 +1,32 @@
+{
+  "id": "dev-ops-basics",
+  "majorId": "software-engineering",
+  "jobId": "backend-dev-engineer",
+  "name": "基础运维与 CI/CD 能力",
+  "level": "basic",
+  "description": "理解基本运维概念，能使用 Git 进行团队协作，了解 CI/CD 流水线的基本配置与使用。",
+  "knowledgePoints": [
+    "Git 分支策略（feature branch / PR 工作流）",
+    "CI/CD 基本概念",
+    "容器化基础（Docker 镜像与容器）",
+    "日志与监控基础"
+  ],
+  "skillPoints": [
+    "使用 Git 完成分支创建、提交、PR 协作流程",
+    "编写基本的 CI 配置文件",
+    "使用 Docker 运行开发环境"
+  ],
+  "relatedCourses": ["软件工程导论", "操作系统"],
+  "prerequisites": ["Git 基本操作"],
+  "evidenceExamples": [
+    "为项目配置 GitHub Actions CI 流水线完成自动测试",
+    "编写 Dockerfile 打包后端服务"
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "基础运维与 CI/CD 能力模拟节点",
+      "note": "第一期演示能力节点。"
+    }
+  ]
+}

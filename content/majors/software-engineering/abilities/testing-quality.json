@@ -1,0 +1,32 @@
+{
+  "id": "testing-quality",
+  "majorId": "software-engineering",
+  "jobId": "backend-dev-engineer",
+  "name": "测试与质量保障能力",
+  "level": "basic",
+  "description": "理解软件测试基本概念，能编写单元测试和集成测试，使用测试框架保障代码质量。",
+  "knowledgePoints": [
+    "测试金字塔（单元/集成/E2E）",
+    "测试驱动开发（TDD）基本流程",
+    "Mock 与 Stub 的使用",
+    "代码覆盖率概念"
+  ],
+  "skillPoints": [
+    "使用测试框架编写单元测试",
+    "对关键业务逻辑编写集成测试",
+    "分析测试覆盖率报告"
+  ],
+  "relatedCourses": ["软件工程导论", "数据结构与算法"],
+  "prerequisites": ["至少掌握一门编程语言"],
+  "evidenceExamples": [
+    "为用户注册模块编写完整的单元测试套件",
+    "说明何时使用 Mock 对象替代真实依赖"
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "测试与质量保障能力模拟节点",
+      "note": "第一期演示能力节点。"
+    }
+  ]
+}
