@@ -1,0 +1,20 @@
+{
+  "id": "data-visualization",
+  "majorId": "automation",
+  "jobId": "industrial-data-analyst",
+  "name": "工业数据可视化",
+  "level": "basic",
+  "description": "使用图表和仪表板呈现工业过程关键指标，直观传达数据趋势与异常。",
+  "knowledgePoints": ["时序数据展示", "多变量对比图表"],
+  "skillPoints": ["设计监控仪表板", "标注异常趋势"],
+  "relatedCourses": ["过程控制", "工程实践训练"],
+  "prerequisites": ["工业数据采集与预处理"],
+  "evidenceExamples": ["提交产线质量看板截图", "标记异常波动并说明"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "工业数据可视化能力模拟节点",
+      "note": "第一期演示能力节点。"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "industrial-data-collection",
+  "majorId": "automation",
+  "jobId": "industrial-data-analyst",
+  "name": "工业数据采集与预处理",
+  "level": "basic",
+  "description": "从工业传感器和数据源获取原始数据，完成清洗、对齐和基本质量判断。",
+  "knowledgePoints": ["传感器数据类型", "采样频率与精度", "数据清洗方法", "异常值检测"],
+  "skillPoints": ["配置数据采集参数", "清洗工业数据集", "判断数据质量"],
+  "relatedCourses": ["传感器与检测技术", "过程控制"],
+  "prerequisites": ["基本编程能力"],
+  "evidenceExamples": ["提供清洗前后的产线数据集", "说明异常值处理依据"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "工业数据采集与预处理能力模拟节点",
+      "note": "第一期演示能力节点。"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "industrial-data-analyst",
+  "majorId": "automation",
+  "name": "工业数据分析工程师",
+  "description": "面向工业产线、过程监控和质量体系，完成数据采集、统计分析、可视化展示和异常诊断。",
+  "workScenarios": ["传感器数据采集与清洗", "生产过程质量指标统计监控", "多源数据关联分析与异常定位", "分析报告与改进建议编写"],
+  "typicalTasks": ["采集产线传感器时序数据并完成预处理", "计算过程能力指数并绘制控制图", "设计监控仪表板展示关键质量指标", "识别异常模式并撰写根因分析报告"],
+  "abilityIds": ["industrial-data-collection", "statistical-analysis", "data-visualization", "quality-analysis"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "工业数据分析工程师岗位模拟描述",
+      "note": "用于第一期闭环演示，不代表真实招聘数据。"
+    }
+  ]
+}

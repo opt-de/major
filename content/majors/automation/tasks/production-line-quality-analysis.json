@@ -1,0 +1,37 @@
+{
+  "id": "production-line-quality-analysis",
+  "majorId": "automation",
+  "jobId": "industrial-data-analyst",
+  "abilityIds": ["industrial-data-collection", "statistical-analysis", "data-visualization", "quality-analysis"],
+  "title": "产线过程质量数据分析",
+  "scenario": "某生产线的传感器实时采集温度、压力和振动数据，近期出现若干批次质量波动。学习者需要导入数据集、执行统计分析、建立监控仪表板，并给出质量诊断报告。",
+  "objectives": ["导入并清洗产线传感器时序数据", "计算关键过程能力指标", "构建质量监控仪表板", "定位异常批次并分析根因"],
+  "steps": ["获取产线模拟数据集并完成清洗", "计算 Cp、Cpk 等过程能力指数", "绘制控制图并标记异常点", "设计仪表板布局，展示关键指标", "撰写质量分析报告，说明异常原因和改进方向"],
+  "deliverables": ["清洗后的数据集或处理脚本", "过程能力计算表", "控制图与监控仪表板", "质量分析报告"],
+  "rubric": [
+    {
+      "criterion": "数据预处理",
+      "description": "数据集清洗合理，异常值处理方法有明确依据。",
+      "levels": ["清洗逻辑缺失", "基础清洗完成", "方法合理且边界清楚"]
+    },
+    {
+      "criterion": "统计分析",
+      "description": "过程能力指标计算正确，结论有数据支撑。",
+      "levels": ["指标计算有误", "指标基本正确", "分析逻辑严谨且可复现"]
+    },
+    {
+      "criterion": "可视化",
+      "description": "图表和仪表板能直观反映过程状态和异常。",
+      "levels": ["图表不足或误导", "基本监控到位", "仪表板设计清晰且实用"]
+    }
+  ],
+  "safetyOrEthicsNotes": ["使用模拟产线数据，不涉及真实生产信息。", "报告中须标注数据为模拟来源。"],
+  "estimatedTime": "4-6 小时",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "产线过程质量分析模拟任务",
+      "note": "第一期用于演示工业数据分析任务闭环。"
+    }
+  ]
+}

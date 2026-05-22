@@ -1,0 +1,20 @@
+{
+  "id": "quality-analysis",
+  "majorId": "automation",
+  "jobId": "industrial-data-analyst",
+  "name": "质量分析与异常检测",
+  "level": "intermediate",
+  "description": "根据过程数据和统计指标识别质量异常，使用结构化框架完成根因分析。",
+  "knowledgePoints": ["常见质量缺陷模式", "根因分析框架"],
+  "skillPoints": ["识别质量异常模式", "撰写分析报告"],
+  "relatedCourses": ["过程控制", "自动控制原理"],
+  "prerequisites": ["统计分析与过程监控"],
+  "evidenceExamples": ["提交产线异常定位报告", "给出改进建议与效果预估"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "质量分析与异常检测能力模拟节点",
+      "note": "第一期演示能力节点。"
+    }
+  ]
+}

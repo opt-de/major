@@ -1,0 +1,20 @@
+{
+  "id": "statistical-analysis",
+  "majorId": "automation",
+  "jobId": "industrial-data-analyst",
+  "name": "统计分析与过程监控",
+  "level": "intermediate",
+  "description": "运用统计方法分析工业过程数据，计算过程能力并建立监控指标。",
+  "knowledgePoints": ["描述性统计", "过程能力指数", "控制图原理"],
+  "skillPoints": ["计算过程能力", "绘制控制图", "解读统计指标"],
+  "relatedCourses": ["自动控制原理", "过程控制"],
+  "prerequisites": ["工业数据采集与预处理"],
+  "evidenceExamples": ["提交 Cp/Cpk 计算过程和结论", "给出控制图判异说明"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "统计分析与过程监控能力模拟节点",
+      "note": "第一期演示能力节点。"
+    }
+  ]
+}
