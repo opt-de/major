@@ -1,0 +1,36 @@
+{
+  "id": "embedded-c-programming",
+  "majorId": "automation",
+  "jobId": "embedded-software-engineer",
+  "name": "嵌入式 C 编程",
+  "level": "basic",
+  "description": "在资源受限的嵌入式环境中使用 C 语言进行底层编程，包括指针操作、内存管理和寄存器访问。",
+  "knowledgePoints": [
+    "C 语言指针与地址运算",
+    "堆与栈的内存分配机制",
+    "volatile 与 const 关键字",
+    "位操作与寄存器映射",
+    "中断服务程序（ISR）编写规范"
+  ],
+  "skillPoints": [
+    "使用指针直接访问硬件寄存器",
+    "编写可重入的函数代码",
+    "分析栈溢出风险并优化内存使用",
+    "通过位掩码完成寄存器配置",
+    "编写符合 MISRA C 规范的代码"
+  ],
+  "relatedCourses": ["C 语言程序设计", "微机原理与接口技术", "嵌入式系统基础"],
+  "prerequisites": ["C 语言程序设计基础"],
+  "evidenceExamples": [
+    "完成 GPIO 寄存器配置并驱动 LED 闪烁",
+    "编写 UART 中断接收函数并处理数据帧",
+    "提交内存使用分析报告，说明栈和堆的分配情况"
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "嵌入式 C 编程能力模拟节点",
+      "note": "第一期演示能力节点，不代表真实课程数据。"
+    }
+  ]
+}

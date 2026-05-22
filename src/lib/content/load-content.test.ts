@@ -4,11 +4,18 @@ import { findAbility, findJob, findMajor, findTask, loadContent } from './load-c
 describe('loadContent', () => {
   it('loads the automation content package', () => {
     const content = loadContent();
+    const majorIds = content.majors.map((major) => major.id);
+    const jobIds = content.jobs.map((job) => job.id);
+    const taskIds = content.tasks.map((task) => task.id);
 
-    expect(content.majors).toHaveLength(1);
-    expect(content.jobs).toHaveLength(1);
+    expect(content.majors.length).toBeGreaterThanOrEqual(1);
+    expect(content.jobs.length).toBeGreaterThanOrEqual(1);
     expect(content.abilities.length).toBeGreaterThanOrEqual(4);
-    expect(content.tasks).toHaveLength(1);
+    expect(content.tasks.length).toBeGreaterThanOrEqual(1);
+
+    expect(majorIds).toContain('automation');
+    expect(jobIds).toContain('control-algorithm-engineer');
+    expect(taskIds).toContain('temperature-control-task');
   });
 
   it('finds core entities by id', () => {
