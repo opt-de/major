@@ -1,0 +1,33 @@
+{
+  "id": "robot-engineer",
+  "majorId": "automation",
+  "name": "机器人工程师",
+  "description": "面向工业机器人、协作机器人和智能装备，完成运动学建模、运动控制、传感器集成与路径规划。",
+  "workScenarios": [
+    "六轴工业机器人搬运与装配作业编程",
+    "移动机器人自主导航与避障",
+    "机器人视觉引导定位与抓取",
+    "多传感器融合的机器人状态估计",
+    "基于 ROS 的机器人系统集成与调试"
+  ],
+  "typicalTasks": [
+    "建立机器人 D-H 参数表并完成正逆运动学计算",
+    "设计关节空间和笛卡尔空间轨迹规划",
+    "集成力传感器、视觉传感器实现柔顺控制",
+    "编写 ROS 节点实现传感器数据采集与指令下发",
+    "输出机器人系统调试报告与性能评估"
+  ],
+  "abilityIds": [
+    "robot-kinematics",
+    "robot-motion-control",
+    "robot-sensor-integration",
+    "robot-path-planning"
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "机器人工程师岗位模拟描述",
+      "note": "用于第一期闭环演示，不代表真实招聘数据。"
+    }
+  ]
+}
