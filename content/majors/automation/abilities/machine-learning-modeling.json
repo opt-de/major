@@ -1,0 +1,20 @@
+{
+  "id": "machine-learning-modeling",
+  "majorId": "automation",
+  "jobId": "industrial-data-analyst",
+  "name": "机器学习建模",
+  "level": "basic",
+  "description": "应用基础机器学习算法对工业数据进行预测建模和模式识别。",
+  "knowledgePoints": ["线性回归与多元回归", "决策树与随机森林", "K-means 聚类", "模型评估指标（MSE、准确率、F1）"],
+  "skillPoints": ["使用 scikit-learn 构建回归与分类模型", "划分训练集、验证集和测试集", "评估模型性能并调优基础参数"],
+  "relatedCourses": ["机器学习基础", "数据挖掘导论"],
+  "prerequisites": ["统计分析与实验设计", "Python 编程基础"],
+  "evidenceExamples": ["构建一个产品质量预测模型并输出评估指标", "使用聚类方法识别设备运行状态模式"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "机器学习建模能力模拟节点",
+      "note": "用于第一期学生协作训练，模拟工业 ML 场景。"
+    }
+  ]
+}
