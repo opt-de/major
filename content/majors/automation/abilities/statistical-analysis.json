@@ -1,0 +1,20 @@
+{
+  "id": "statistical-analysis",
+  "majorId": "automation",
+  "jobId": "industrial-data-analyst",
+  "name": "统计分析与实验设计",
+  "level": "basic",
+  "description": "运用统计方法对工业数据进行分析，识别数据分布特征、变量关系和显著性差异。",
+  "knowledgePoints": ["描述性统计与数据分布特征", "假设检验（t检验、卡方检验）", "相关性分析与回归基础", "方差分析（ANOVA）基础"],
+  "skillPoints": ["计算统计量并解读分布特征", "执行 t检验和卡方检验", "绘制统计图表（箱线图、直方图、散点图）"],
+  "relatedCourses": ["概率论与数理统计", "工程统计学"],
+  "prerequisites": ["微积分基础", "Python 编程基础"],
+  "evidenceExamples": ["完成一批传感器样本的描述性统计分析", "通过假设检验比较两组工艺参数下的质量差异"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "统计分析与实验设计能力模拟节点",
+      "note": "用于第一期学生协作训练，模拟工业统计场景。"
+    }
+  ]
+}
