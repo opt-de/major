@@ -35,5 +35,9 @@ pnpm-debug.log*
 # local agent state
 .codex/
 
+# repo-local Buddy skills are replaced by global skills
+.agents/skills/openspec-buddy*
+.agents/skills/openspec-buddy*/**
+
 # code review graph local database and logs
 .code-review-graph/
