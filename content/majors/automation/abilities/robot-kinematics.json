@@ -1,0 +1,20 @@
+{
+  "id": "robot-kinematics",
+  "majorId": "automation",
+  "jobId": "robot-engineer",
+  "name": "机器人运动学建模",
+  "level": "intermediate",
+  "description": "建立机器人连杆坐标系，完成 D-H 参数建模和正逆运动学分析。",
+  "knowledgePoints": ["D-H 参数法", "正运动学", "逆运动学", "雅可比矩阵"],
+  "skillPoints": ["建立 D-H 参数表", "计算末端位姿", "求解逆运动学"],
+  "relatedCourses": ["机器人学基础", "自动控制原理"],
+  "prerequisites": ["线性代数基础", "空间坐标变换"],
+  "evidenceExamples": ["给出六轴机器人的 D-H 参数表", "完成正运动学 MATLAB/Python 验证"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "机器人运动学建模能力模拟节点",
+      "note": "第一期演示能力节点。"
+    }
+  ]
+}
