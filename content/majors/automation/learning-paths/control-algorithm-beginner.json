@@ -26,5 +26,12 @@
       "resourceIds": ["project-report-template"],
       "expectedOutcome": "能用模型、参数、曲线和结论组成完整报告。"
     }
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "控制算法工程师入门路径模拟数据",
+      "note": "第一期用于演示学习路径。"
+    }
   ]
 }

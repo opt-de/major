@@ -26,5 +26,12 @@
       "resourceIds": ["ml-deployment-guide"],
       "expectedOutcome": "能将训练好的模型封装为 API 服务并使用 Docker 完成容器化部署。"
     }
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "机器学习工程师入门路径模拟数据",
+      "note": "第一期用于演示学习路径。"
+    }
   ]
 }
