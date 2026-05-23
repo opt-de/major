@@ -1,0 +1,33 @@
+{
+  "id": "backend-developer",
+  "majorId": "software-engineering",
+  "name": "后端开发工程师",
+  "description": "面向服务器端应用和 API 开发，完成需求分析、架构设计、接口实现、数据库设计与系统部署维护。",
+  "workScenarios": [
+    "基于 Spring Boot 框架开发 RESTful API",
+    "设计关系型数据库表结构和查询优化",
+    "实现用户认证、授权和权限管理系统",
+    "编写单元测试和集成测试保障代码质量",
+    "参与代码审查和技术方案评审"
+  ],
+  "typicalTasks": [
+    "根据需求文档设计 RESTful API 接口",
+    "编写数据库表结构定义和迁移脚本",
+    "实现业务逻辑层和数据访问层的代码",
+    "使用 Swagger/OpenAPI 编写接口文档",
+    "排查线上问题并编写问题分析报告"
+  ],
+  "abilityIds": [
+    "java-programming",
+    "database-design",
+    "system-design",
+    "engineering-collaboration"
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "后端开发工程师岗位模拟描述",
+      "note": "用于第一期闭环演示，不代表真实招聘数据。"
+    }
+  ]
+}

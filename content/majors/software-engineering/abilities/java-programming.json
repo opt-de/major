@@ -1,0 +1,36 @@
+{
+  "id": "java-programming",
+  "majorId": "software-engineering",
+  "jobId": "backend-developer",
+  "name": "Java 编程基础",
+  "level": "basic",
+  "description": "使用 Java 语言进行面向对象编程，包括类与对象、继承多态、异常处理、集合框架和 I/O 操作。",
+  "knowledgePoints": [
+    "面向对象三大特性：封装、继承、多态",
+    "Java 集合框架：List、Set、Map",
+    "异常处理机制与自定义异常",
+    "I/O 流与文件操作",
+    "泛型与注解基础"
+  ],
+  "skillPoints": [
+    "使用继承和接口设计可扩展的类层次结构",
+    "使用集合框架完成数据存储和检索",
+    "编写 try-catch-finally 处理受检和非受检异常",
+    "使用缓冲流读写文件",
+    "编写符合 Java 编码规范的代码"
+  ],
+  "relatedCourses": ["面向对象程序设计", "Java 语言程序设计", "数据结构与算法"],
+  "prerequisites": ["程序设计基础"],
+  "evidenceExamples": [
+    "完成一个基于继承的员工管理系统类设计",
+    "使用集合框架实现图书检索功能",
+    "编写文件读写程序并处理 IO 异常"
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "Java 编程能力模拟节点",
+      "note": "第一期演示能力节点，不代表真实课程数据。"
+    }
+  ]
+}
