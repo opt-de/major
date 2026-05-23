@@ -129,7 +129,7 @@ export const learningPathSchema = z.object({
   title: z.string().min(1),
   targetLevel: z.enum(['starter', 'project-ready', 'job-ready']),
   nodes: z.array(learningPathNodeSchema).min(1),
-  sourceRefs: z.array(sourceRefSchema).min(1),
+  sourceRefs: z.array(sourceRefSchema).min(1).optional(),
 });
 
 export const contributorSchema = z.object({
