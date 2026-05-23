@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import {
   abilitySchema,
@@ -49,6 +49,7 @@ function discoverMajorDirs(): string[] {
   return readdirSync(majorsRoot, { withFileTypes: true })
     .filter((dirent) => dirent.isDirectory())
     .map((dirent) => dirent.name)
+    .filter((name) => existsSync(path.join(majorsRoot, name, 'major.json')))
     .sort();
 }
 

@@ -1,0 +1,66 @@
+{
+  "id": "api-design-task",
+  "majorId": "software-engineering",
+  "jobId": "backend-developer",
+  "abilityIds": ["java-programming", "database-design", "system-design", "engineering-collaboration"],
+  "title": "设计并实现用户管理 API",
+  "scenario": "某团队正在开发一个博客系统，需要你设计并实现用户管理模块的 RESTful API。你需要完成数据库表设计、接口定义和基本实现，并编写对应的单元测试和接口文档。",
+  "objectives": [
+    "设计 users 表结构并编写建表 DDL",
+    "设计用户管理相关的 RESTful API 接口",
+    "实现用户注册和登录的 API 逻辑",
+    "编写接口的单元测试",
+    "输出 OpenAPI 格式的接口文档"
+  ],
+  "steps": [
+    "分析用户管理的业务需求，提取实体和字段",
+    "设计符合 3NF 的 users 表结构",
+    "定义 RESTful API 端点、请求体和响应格式",
+    "实现用户注册接口（含密码加密和参数校验）",
+    "实现用户登录接口（含 JWT Token 生成）",
+    "使用 JUnit 为两个接口编写单元测试",
+    "生成 OpenAPI/Swagger 接口文档"
+  ],
+  "deliverables": [
+    "DDL 建表脚本",
+    "API 接口定义文档",
+    "Java 接口实现代码",
+    "单元测试代码",
+    "OpenAPI 规范文档"
+  ],
+  "rubric": [
+    {
+      "criterion": "数据库设计",
+      "description": "表结构符合 3NF，字段类型合理，包含必要的约束。",
+      "levels": ["存在冗余或缺失主键", "满足 3NF 且字段设计合理", "设计完整且包含索引和约束说明"]
+    },
+    {
+      "criterion": "API 设计",
+      "description": "接口符合 REST 风格，URI 命名规范，状态码使用正确。",
+      "levels": ["URI 命名不规范或方法选择错误", "基本符合 REST 风格和命名规范", "设计优雅且包含错误处理和版本管理"]
+    },
+    {
+      "criterion": "代码质量",
+      "description": "代码结构清晰，异常处理完整，遵循 Java 编码规范。",
+      "levels": ["代码存在明显结构问题", "代码结构清晰且异常处理完整", "代码可读性强且包含边界情况处理"]
+    },
+    {
+      "criterion": "测试覆盖",
+      "description": "单元测试覆盖正常流程和异常边界。",
+      "levels": ["缺少异常场景测试", "覆盖正常流程和主要异常场景", "测试用例完整且包含 Mock 外部依赖"]
+    }
+  ],
+  "safetyOrEthicsNotes": [
+    "密码必须加密存储，不得明文保存。",
+    "API 文档中不得暴露敏感信息（密钥、密码等）。",
+    "本任务使用模拟数据，不代表真实用户系统。"
+  ],
+  "estimatedTime": "6-8 小时",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "API 设计任务模拟数据",
+      "note": "第一期用于演示任务生成闭环。"
+    }
+  ]
+}
