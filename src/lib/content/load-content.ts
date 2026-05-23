@@ -45,22 +45,36 @@ export type ContentIndex = {
 };
 
 export function loadContent(): ContentIndex {
-  const automationRoot = path.join(contentRoot, 'majors', 'automation');
+  const majorsRoot = path.join(contentRoot, 'majors');
+  const majorIds = readdirSync(majorsRoot).filter((name) =>
+    existsSync(path.join(majorsRoot, name, 'major.json')),
+  );
+
+  const majors: Major[] = [];
+  const jobs: JobRole[] = [];
+  const abilities: Ability[] = [];
+  const tasks: LearningTask[] = [];
+  const diagnostics: Diagnostic[] = [];
+  const learningPaths: LearningPath[] = [];
+  const resources: Resource[] = [];
+
+  for (const majorId of majorIds) {
+    const majorPath = path.join(majorsRoot, majorId);
+    majors.push(readJson(path.join(majorPath, 'major.json'), majorSchema));
+    jobs.push(...readJsonDir(path.join(majorPath, 'jobs'), jobRoleSchema));
+    abilities.push(...readJsonDir(path.join(majorPath, 'abilities'), abilitySchema));
+    tasks.push(...readJsonDir(path.join(majorPath, 'tasks'), learningTaskSchema));
+    diagnostics.push(...readJsonDir(path.join(majorPath, 'diagnostics'), diagnosticSchema));
+    learningPaths.push(...readJsonDir(path.join(majorPath, 'learning-paths'), learningPathSchema));
+    resources.push(...readJsonDir(path.join(majorPath, 'resources'), resourceSchema));
+  }
+
   const contributors = readJson(
     path.join(contentRoot, 'contributors', 'contributors.json'),
     contributorsFileSchema,
   ).contributors;
 
-  return {
-    majors: [readJson(path.join(automationRoot, 'major.json'), majorSchema)],
-    jobs: readJsonDir(path.join(automationRoot, 'jobs'), jobRoleSchema),
-    abilities: readJsonDir(path.join(automationRoot, 'abilities'), abilitySchema),
-    tasks: readJsonDir(path.join(automationRoot, 'tasks'), learningTaskSchema),
-    diagnostics: readJsonDir(path.join(automationRoot, 'diagnostics'), diagnosticSchema),
-    learningPaths: readJsonDir(path.join(automationRoot, 'learning-paths'), learningPathSchema),
-    resources: readJsonDir(path.join(automationRoot, 'resources'), resourceSchema),
-    contributors,
-  };
+  return { majors, jobs, abilities, tasks, diagnostics, learningPaths, resources, contributors };
 }
 
 export function findMajor(majorId: string): Major | undefined {

@@ -41,6 +41,3 @@ pnpm-debug.log*
 
 # code review graph local database and logs
 .code-review-graph/
-
-# nested repo copy (created by earlier operations)
-major/
