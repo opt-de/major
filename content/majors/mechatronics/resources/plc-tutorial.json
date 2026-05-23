@@ -1,0 +1,13 @@
+{
+  "id": "plc-tutorial",
+  "title": "PLC编程入门教程",
+  "type": "course",
+  "description": "用于支撑PLC梯形图编程、I/O地址分配和顺序控制程序调试学习的资源占位。",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "教程资源模拟条目",
+      "note": "第一期仅作为学习路径资源占位。"
+    }
+  ]
+}

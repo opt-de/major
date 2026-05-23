@@ -1,0 +1,20 @@
+{
+  "id": "sensor-and-measurement",
+  "majorId": "mechatronics",
+  "jobId": "mechatronics-system-engineer",
+  "name": "传感器与测量技术",
+  "level": "basic",
+  "description": "掌握常用工业传感器的原理、选型方法和信号处理技术，能够根据测量需求设计信号采集方案。",
+  "knowledgePoints": ["温度传感器", "位移与位置传感器", "力与压力传感器", "信号调理电路"],
+  "skillPoints": ["根据被测物理量选择传感器类型", "计算传感器量程与精度", "设计信号调理方案", "分析测量误差来源"],
+  "relatedCourses": ["传感器与检测技术", "模拟电子技术"],
+  "prerequisites": ["电路分析基础", "模拟电子技术基础"],
+  "evidenceExamples": ["为传送带速度检测选择合适的编码器型号", "设计温度传感器信号调理电路"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "传感器与测量技术能力模拟节点",
+      "note": "第一期演示能力节点。"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "mechatronics-basic",
+  "majorId": "mechatronics",
+  "jobId": "mechatronics-system-engineer",
+  "title": "机电系统工程师基础诊断",
+  "questions": [
+    {
+      "id": "q1",
+      "abilityId": "mechanical-design-basics",
+      "prompt": "在带传动设计中，小带轮包角过小主要会导致什么问题？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "传动能力下降，容易打滑" },
+        { "id": "b", "text": "带轮转速过高" },
+        { "id": "c", "text": "轴承温度降低" }
+      ],
+      "answer": "a",
+      "explanation": "包角越小，带与带轮的接触面积越小，摩擦力减小，传动能力下降。"
+    },
+    {
+      "id": "q2",
+      "abilityId": "sensor-and-measurement",
+      "prompt": "测量旋转轴转速时，增量式编码器比绝对式编码器的优势是分辨率更高。",
+      "type": "true-false",
+      "options": [
+        { "id": "true", "text": "正确" },
+        { "id": "false", "text": "错误" }
+      ],
+      "answer": "false",
+      "explanation": "绝对式编码器每圈有唯一编码值，断电后仍可获取位置；增量式编码器结构简单但分辨率不一定更高，两者各有适用场景。"
+    },
+    {
+      "id": "q3",
+      "abilityId": "mechatronic-control",
+      "prompt": "伺服电机速度闭环控制中，若实际速度低于设定值，PID控制器会增大输出以减小误差。",
+      "type": "true-false",
+      "options": [
+        { "id": "true", "text": "正确" },
+        { "id": "false", "text": "错误" }
+      ],
+      "answer": "true",
+      "explanation": "负反馈控制中，当实际值低于设定值时误差为正，控制器会增大输出来补偿。"
+    },
+    {
+      "id": "q4",
+      "abilityId": "plc-programming",
+      "prompt": "PLC中定时器TON的功能是什么？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "接通延时，输入ON后延时输出ON" },
+        { "id": "b", "text": "断开延时，输入OFF后延时输出OFF" },
+        { "id": "c", "text": "计数到达后输出脉冲" }
+      ],
+      "answer": "a",
+      "explanation": "TON（Timer ON Delay）是通电延时定时器，输入信号接通后开始计时，到达设定值时输出接通。"
+    },
+    {
+      "id": "q5",
+      "abilityId": "mechatronic-control",
+      "prompt": "步进电机在低速运行时可能出现低频振动，以下哪种方法最常用于抑制？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "使用细分驱动" },
+        { "id": "b", "text": "降低供电电压" },
+        { "id": "c", "text": "增大负载惯量" }
+      ],
+      "answer": "a",
+      "explanation": "细分驱动技术将步进电机的每一步分成多个微步，可以显著减小低速振动和噪声。"
+    }
+  ],
+  "scoringRules": [
+    { "abilityId": "mechanical-design-basics", "weakBelow": 1, "feedback": "需要复习带传动、齿轮传动等常见传动方式的特点和选型原则。" },
+    { "abilityId": "sensor-and-measurement", "weakBelow": 1, "feedback": "需要巩固常用传感器原理和选型依据。" },
+    { "abilityId": "mechatronic-control", "weakBelow": 2, "feedback": "需要补充伺服电机控制和PID参数调整相关知识。" },
+    { "abilityId": "plc-programming", "weakBelow": 1, "feedback": "需要复习PLC基本指令和定时器/计数器使用方法。" }
+  ]
+}

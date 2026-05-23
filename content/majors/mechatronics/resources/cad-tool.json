@@ -1,0 +1,13 @@
+{
+  "id": "cad-tool",
+  "title": "CAD机械设计工具入门",
+  "type": "tool",
+  "description": "用于完成传动简图绘制和机械零件建模的设计工具学习资源。",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "设计工具模拟资源",
+      "note": "第一期仅作为学习路径资源占位。"
+    }
+  ]
+}
