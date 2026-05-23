@@ -1,0 +1,30 @@
+{
+  "id": "ml-engineer-starter",
+  "majorId": "artificial-intelligence",
+  "jobId": "ml-engineer",
+  "title": "机器学习工程师入门路径",
+  "targetLevel": "starter",
+  "nodes": [
+    {
+      "id": "math-and-python-foundation",
+      "title": "数学与编程基础",
+      "abilityIds": ["data-preprocessing"],
+      "resourceIds": ["python-for-data-science"],
+      "expectedOutcome": "能使用 Python 和 Pandas 完成基本的数据清洗和统计分析。"
+    },
+    {
+      "id": "ml-fundamentals",
+      "title": "机器学习基础建模",
+      "abilityIds": ["ml-modeling", "ml-evaluation"],
+      "resourceIds": ["ml-crash-course"],
+      "expectedOutcome": "能使用 scikit-learn 完成完整的分类或回归建模流程并输出评估报告。"
+    },
+    {
+      "id": "deployment-practice",
+      "title": "模型部署入门",
+      "abilityIds": ["model-deployment"],
+      "resourceIds": ["ml-deployment-guide"],
+      "expectedOutcome": "能将训练好的模型封装为 API 服务并使用 Docker 完成容器化部署。"
+    }
+  ]
+}
