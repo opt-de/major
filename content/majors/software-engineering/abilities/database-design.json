@@ -1,0 +1,36 @@
+{
+  "id": "database-design",
+  "majorId": "software-engineering",
+  "jobId": "backend-developer",
+  "name": "数据库设计",
+  "level": "basic",
+  "description": "掌握关系型数据库的设计方法，包括 E-R 建模、范式化设计、SQL 编写和基本索引优化。",
+  "knowledgePoints": [
+    "E-R 实体关系模型与建模方法",
+    "关系模式规范化（1NF、2NF、3NF）",
+    "SQL DDL/DML 语句编写",
+    "主键、外键与索引设计",
+    "事务 ACID 特性与隔离级别"
+  ],
+  "skillPoints": [
+    "根据业务需求绘制 E-R 图并转换为关系模式",
+    "编写符合 3NF 的表结构定义",
+    "使用 JOIN、子查询完成多表数据检索",
+    "分析慢查询并添加合适的索引",
+    "编写事务控制代码处理并发数据操作"
+  ],
+  "relatedCourses": ["数据库系统概论", "SQL 程序设计", "软件工程导论"],
+  "prerequisites": ["程序设计基础"],
+  "evidenceExamples": [
+    "设计一个电商系统的数据库 E-R 模型",
+    "编写含多表 JOIN 的查询语句完成报表统计",
+    "添加索引后对比查询执行计划变化"
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "数据库设计能力模拟节点",
+      "note": "第一期演示能力节点，不代表真实课程数据。"
+    }
+  ]
+}
