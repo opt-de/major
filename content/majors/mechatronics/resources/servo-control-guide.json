@@ -1,0 +1,13 @@
+{
+  "id": "servo-control-guide",
+  "title": "伺服驱动与控制入门",
+  "type": "course",
+  "description": "用于支撑伺服电机选型、驱动器参数设置和运动控制调试学习的资源占位。",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "课程资源模拟条目",
+      "note": "第一期仅作为学习路径资源占位。"
+    }
+  ]
+}

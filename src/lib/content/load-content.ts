@@ -44,29 +44,55 @@ export type ContentIndex = {
   contributors: Contributor[];
 };
 
-export function loadContent(): ContentIndex {
+function discoverMajorDirs(): string[] {
   const majorsRoot = path.join(contentRoot, 'majors');
-  const majorIds = readdirSync(majorsRoot).filter((name) =>
-    existsSync(path.join(majorsRoot, name, 'major.json')),
-  );
+  return readdirSync(majorsRoot, { withFileTypes: true })
+    .filter((dirent) => dirent.isDirectory())
+    .map((dirent) => dirent.name)
+    .filter((name) => existsSync(path.join(majorsRoot, name, 'major.json')))
+    .sort();
+}
 
-  const majors: Major[] = [];
-  const jobs: JobRole[] = [];
-  const abilities: Ability[] = [];
-  const tasks: LearningTask[] = [];
-  const diagnostics: Diagnostic[] = [];
-  const learningPaths: LearningPath[] = [];
-  const resources: Resource[] = [];
+function loadMajorContent(majorId: string): {
+  major: Major;
+  jobs: JobRole[];
+  abilities: Ability[];
+  tasks: LearningTask[];
+  diagnostics: Diagnostic[];
+  learningPaths: LearningPath[];
+  resources: Resource[];
+} {
+  const majorRoot = path.join(contentRoot, 'majors', majorId);
+  return {
+    major: readJson(path.join(majorRoot, 'major.json'), majorSchema),
+    jobs: readJsonDir(path.join(majorRoot, 'jobs'), jobRoleSchema),
+    abilities: readJsonDir(path.join(majorRoot, 'abilities'), abilitySchema),
+    tasks: readJsonDir(path.join(majorRoot, 'tasks'), learningTaskSchema),
+    diagnostics: readJsonDir(path.join(majorRoot, 'diagnostics'), diagnosticSchema),
+    learningPaths: readJsonDir(path.join(majorRoot, 'learning-paths'), learningPathSchema),
+    resources: readJsonDir(path.join(majorRoot, 'resources'), resourceSchema),
+  };
+}
+
+export function loadContent(): ContentIndex {
+  const majorIds = discoverMajorDirs();
+  const allMajors: Major[] = [];
+  const allJobs: JobRole[] = [];
+  const allAbilities: Ability[] = [];
+  const allTasks: LearningTask[] = [];
+  const allDiagnostics: Diagnostic[] = [];
+  const allLearningPaths: LearningPath[] = [];
+  const allResources: Resource[] = [];
 
   for (const majorId of majorIds) {
-    const majorPath = path.join(majorsRoot, majorId);
-    majors.push(readJson(path.join(majorPath, 'major.json'), majorSchema));
-    jobs.push(...readJsonDir(path.join(majorPath, 'jobs'), jobRoleSchema));
-    abilities.push(...readJsonDir(path.join(majorPath, 'abilities'), abilitySchema));
-    tasks.push(...readJsonDir(path.join(majorPath, 'tasks'), learningTaskSchema));
-    diagnostics.push(...readJsonDir(path.join(majorPath, 'diagnostics'), diagnosticSchema));
-    learningPaths.push(...readJsonDir(path.join(majorPath, 'learning-paths'), learningPathSchema));
-    resources.push(...readJsonDir(path.join(majorPath, 'resources'), resourceSchema));
+    const content = loadMajorContent(majorId);
+    allMajors.push(content.major);
+    allJobs.push(...content.jobs);
+    allAbilities.push(...content.abilities);
+    allTasks.push(...content.tasks);
+    allDiagnostics.push(...content.diagnostics);
+    allLearningPaths.push(...content.learningPaths);
+    allResources.push(...content.resources);
   }
 
   const contributors = readJson(
@@ -74,7 +100,16 @@ export function loadContent(): ContentIndex {
     contributorsFileSchema,
   ).contributors;
 
-  return { majors, jobs, abilities, tasks, diagnostics, learningPaths, resources, contributors };
+  return {
+    majors: allMajors,
+    jobs: allJobs,
+    abilities: allAbilities,
+    tasks: allTasks,
+    diagnostics: allDiagnostics,
+    learningPaths: allLearningPaths,
+    resources: allResources,
+    contributors,
+  };
 }
 
 export function findMajor(majorId: string): Major | undefined {
