@@ -4,6 +4,13 @@
   "jobId": "mechatronics-system-engineer",
   "title": "机电系统工程师入门路径",
   "targetLevel": "starter",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "机电系统工程师入门路径模拟数据",
+      "note": "第一期演示学习路径。"
+    }
+  ],
   "nodes": [
     {
       "id": "mechanical-foundation",

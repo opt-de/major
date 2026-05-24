@@ -68,6 +68,13 @@
       "explanation": "细分驱动技术将步进电机的每一步分成多个微步，可以显著减小低速振动和噪声。"
     }
   ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "机电系统工程师基础诊断模拟数据",
+      "note": "第一期演示诊断题集。"
+    }
+  ],
   "scoringRules": [
     { "abilityId": "mechanical-design-basics", "weakBelow": 1, "feedback": "需要复习带传动、齿轮传动等常见传动方式的特点和选型原则。" },
     { "abilityId": "sensor-and-measurement", "weakBelow": 1, "feedback": "需要巩固常用传感器原理和选型依据。" },
