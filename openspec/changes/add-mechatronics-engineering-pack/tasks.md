@@ -35,6 +35,6 @@
 
 ## 8. 提交与 PR
 
-- [ ] 8.1 创建 feature 分支 `feature/issue-19-mechatronics-engineering`
-- [ ] 8.2 提交变更并推送到远程
-- [ ] 8.3 创建 PR 到 integration 分支，关联 Issue #19
+- [x] 8.1 创建 feature 分支 `feature/issue-19-mechatronics-engineering`
+- [x] 8.2 提交变更并推送到远程
+- [x] 8.3 创建 PR 到 integration 分支，关联 Issue #19 (PR #59)
