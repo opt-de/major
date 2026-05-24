@@ -27,6 +27,7 @@ function readJson<T>(filePath: string, schema: { parse: (value: unknown) => T })
 }
 
 function readJsonDir<T>(dirPath: string, schema: { parse: (value: unknown) => T }): T[] {
+  if (!existsSync(dirPath)) return [];
   return readdirSync(dirPath)
     .filter((filename) => filename.endsWith('.json'))
     .sort()
