@@ -26,6 +26,12 @@ export default async function AbilityDetailPage({
           <p className="text-sm text-stone-700">{ability.skillPoints.join('、')}</p>
         </InfoCard>
         <InfoCard title="支撑课程">
+          <InfoCard title="先决条件">
+            <p className="text-sm text-stone-700">{ability.prerequisites?.join('、')}</p>
+          </InfoCard>
+          <InfoCard title="等级">
+            <p className="text-sm text-stone-700">{ability.level}</p>
+          </InfoCard>
           <p className="text-sm text-stone-700">{ability.relatedCourses.join('、')}</p>
         </InfoCard>
         <InfoCard title="证据样例">

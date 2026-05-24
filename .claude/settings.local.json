@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(openspec status *)",
+      "Bash(openspec instructions *)",
+      "Bash(openspec apply *)",
+      "Skill(openspec-apply-change)",
+      "Bash(openspec change *)",
+      "Skill(openspec-explore)",
+      "Skill(openspec-propose)",
+      "Bash(npm run *)",
+      "Bash(git checkout *)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "code-review-graph"
+  ]
+}
