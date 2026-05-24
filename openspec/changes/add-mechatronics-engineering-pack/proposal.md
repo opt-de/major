@@ -1,38 +1,33 @@
 ## Why
 
-Issue #19 要求新增"机械电子工程"本科专业内容包，以扩展平台的专业覆盖范围。当前平台只有自动化一个专业，新增机械电子工程专业可以为学生提供机电一体化方向的岗位能力图谱和学习路径参考。
+Issue #19 要求的机械电子工程专业内容包已由 PR #58 实现并合并到 integration。本 PR 补充对应的 OpenSpec 变更制品（proposal、design、specs、tasks），记录该内容包的设计决策与实施过程，供后续归档和复盘使用。
+
+同时包含 `src/lib/content/load-content.ts` 中 `readJsonDir()` 的目录存在性保护：当某个 content 子目录不存在时返回空数组而非抛出异常，提升多专业扫描的健壮性。
 
 ## What Changes
 
-- 新增 `content/majors/mechatronics-engineering/major.json` 专业文件
-- 新增 `content/majors/mechatronics-engineering/jobs/mechatronics-engineer.json` 岗位文件
-- 新增 4 个机电工程师能力节点 JSON 文件：
-  - `mechanical-design.json` — 机械设计基础
-  - `electrical-control.json` — 电气控制技术
-  - `sensor-detection.json` — 传感器与检测技术
-  - `mechatronics-integration.json` — 机电系统集成
-- 新增 1 个学习任务：`assembly-station-design.json` — 自动化装配工作站机电系统设计
-- 新增 1 套诊断题：`mechatronics-basic.json` — 机电工程师基础诊断
-- 新增 1 条学习路径：`mechatronics-beginner.json` — 机电工程师入门路径
-- 所有内容使用 `sourceRefs: [{ type: "mock" }]` 标注为模拟数据
+- 新增 `openspec/changes/add-mechatronics-engineering-pack/` 下完整 OpenSpec 制品：
+  - `proposal.md`、`design.md`、`tasks.md`
+  - `specs/` 下 9 个能力规格文件
+- 修改 `src/lib/content/load-content.ts`：`readJsonDir()` 增加 `existsSync` 检查，允许 content 子目录缺失时不崩溃
 
 ## Capabilities
 
-### New Capabilities
+### Documented Capabilities（对应已合入 content/majors/mechatronics/ 的内容）
 
-- `mechatronics-major`: 机械电子工程专业内容包，包含专业简介、核心课程、培养目标
-- `mechatronics-engineer-job`: 机电工程师岗位内容包，包含岗位描述、工作场景、典型任务和关联能力节点
-- `mechanical-design`: 机械设计基础能力节点，覆盖工程制图、公差配合、材料力学等
-- `electrical-control`: 电气控制技术能力节点，覆盖电路分析、PLC编程、电气安全等
-- `sensor-detection`: 传感器与检测技术能力节点，覆盖传感器选型、信号调理、数据采集等
-- `mechatronics-integration`: 机电系统集成能力节点，覆盖机电接口设计、系统联调、故障诊断等
-- `assembly-station-task`: 自动化装配工作站机电系统设计学习任务
-- `mechatronics-diagnostic`: 机电工程师基础诊断题
-- `mechatronics-learning-path`: 机电工程师入门学习路径
+- `mechatronics-major`: 机械电子工程专业（id: `mechatronics`），工学门类
+- `mechatronics-system-engineer-job`: 机电系统工程师岗位，关联 4 个能力节点
+- `mechanical-design-basics`: 机械设计基础能力（basic）
+- `sensor-and-measurement`: 传感器与测量技术能力（basic）
+- `mechatronic-control`: 机电传动控制能力（intermediate）
+- `plc-programming`: PLC 编程与应用能力（intermediate）
+- `automated-conveyor-task`: 自动化传送带机电控制系统设计学习任务
+- `mechatronics-diagnostic`: 机电系统工程师基础诊断（5 题）
+- `mechatronics-learning-path`: 机电系统工程师入门路径（3 节点）
 
 ## Impact
 
-- 内容文件：新增 8 个 JSON 文件（专业、岗位、4个能力、1个任务、1套诊断、1条学习路径）
-- 校验脚本：`npm run validate-content` 会自动校验所有新文件的 schema 合规性及引用完整性
-- 前端页面：新增内容会被内容加载器自动读取，前端页面自动展示
-- 无 API 变更，无 schema 变更，无代码变更
+- OpenSpec 制品：新增 13 个文件
+- 代码变更：`src/lib/content/load-content.ts` — `readJsonDir()` 增加目录存在性检查，不改变加载逻辑
+- 内容文件：无变更（已由 PR #58 合入）
+- 无 schema 变更，无页面变更

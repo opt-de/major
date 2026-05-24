@@ -1,46 +1,39 @@
 ## Context
 
-当前平台已有自动化专业的完整内容包作为示例（包含2个岗位、8个能力节点、1个任务、1套诊断题、1条学习路径）。Issue #19 要求新增"机械电子工程"专业内容包，遵循相同的 JSON 内容文件 + Zod schema 校验模式。
-
-新增专业使用独立的目录 `content/majors/mechatronics-engineering/`，与现有的 `automation/` 目录平级。内容加载器会自动发现新目录。
+PR #58 已将机械电子工程专业内容包合入 integration（`content/majors/mechatronics/`），包含 major、job、4 个 ability、1 个 task、1 套 diagnostic、1 条 learning path 和 4 个 resource。本 PR 为该内容包补充 OpenSpec 变更制品，并附带一项 loader 健壮性改进。
 
 ## Goals / Non-Goals
 
 **Goals:**
-- 新增机械电子工程专业 JSON 文件，包含专业简介、核心课程、培养目标
-- 新增 1 个岗位（机电工程师），包含工作场景、典型任务、能力节点引用
-- 新增 4 个能力节点，覆盖机械设计、电气控制、传感器检测、系统集成
-- 新增 1 个学习任务（自动化装配工作站机电系统设计）
-- 新增 1 套诊断题（≥5 道题，覆盖所有能力节点）
-- 新增 1 条学习路径（机电工程师入门路径）
-- 通过 `npm run validate-content` 校验
+- 创建与已合并内容一致的 OpenSpec 制品（proposal、design、specs、tasks）
+- 修复 `readJsonDir()` 对不存在目录的容错（`existsSync` 守卫）
 
 **Non-Goals:**
-- 不修改任何代码文件（schema、loader、页面组件等）
-- 不在现有自动化专业中引用新专业的内容
+- 不新增或修改 content JSON 文件（已由 PR #58 完成）
+- 不修改 Zod schema
+- 不修改前端页面或 API
 
 ## Decisions
 
-**专业 ID**：使用 `mechatronics-engineering`，与英文专业名称一致。
+**OpenSpec 制品追溯已合并内容**：所有 spec 文件中的 ID、名称、字段均与 `content/majors/mechatronics/` 下的真实文件一致，确保后续归档时可一一对应。
 
-**岗位设计**：选择"机电工程师"作为核心岗位，机械电子工程最典型的就业方向，覆盖机械、电子、控制、传感等多学科交叉。
+**真实内容映射**：
 
-**能力节点设计**：4 个能力节点覆盖机械电子工程的核心技能域，按照从基础到综合的层次：
-1. 机械设计基础（basic）— 工程制图、公差、材料力学等基础
-2. 电气控制技术（basic）— 电路、PLC、电机驱动等基础
-3. 传感器与检测技术（basic）— 传感器选型、信号调理等基础
-4. 机电系统集成（intermediate）— 综合三个基础能力完成系统设计
+| 类型 | 文件 | ID |
+|------|------|----|
+| 专业 | major.json | mechatronics |
+| 岗位 | jobs/mechatronics-system-engineer.json | mechatronics-system-engineer |
+| 能力 | abilities/mechanical-design-basics.json | mechanical-design-basics |
+| 能力 | abilities/sensor-and-measurement.json | sensor-and-measurement |
+| 能力 | abilities/mechatronic-control.json | mechatronic-control |
+| 能力 | abilities/plc-programming.json | plc-programming |
+| 任务 | tasks/automated-conveyor-task.json | automated-conveyor-task |
+| 诊断 | diagnostics/mechatronics-basic.json | mechatronics-basic |
+| 学习路径 | learning-paths/mechatronics-beginner.json | mechatronics-beginner |
 
-**学习任务设计**：自动化装配工作站机电系统设计 — 一个典型机电一体化项目，同时覆盖 4 个能力节点。
-
-**诊断题设计**：≥5 道题，覆盖所有 4 个能力节点，每道题绑定一个 abilityId。
-
-**学习路径设计**：3 个节点的入门路径，对应基础能力→综合集成的渐进学习路线。
-
-**数据来源**：全部使用 `sourceRefs: [{ type: "mock" }]` 标注为模拟数据，符合第一期规范。
+**Loader 改进**：`readJsonDir()` 增加 `existsSync(dirPath)` 检查。背景：当 `discoverMajorDirs()` 发现 major 目录但该目录缺少某个子目录（如 `resources/`）时，不应让整个 `loadContent()` 崩溃。该改动不改变正常加载行为，只增加缺目录容错。
 
 ## Risks / Trade-offs
 
-- [引用完整性] → validate-content.ts 会校验 job.abilityIds → ability.id 和 task.abilityIds → ability.id 的引用。创建文件时必须确保所有 ID 引用一致。
-- [ID 命名] → 所有 ID 使用英文 kebab-case，必须与文件名匹配。
-- [内容质量] → Mock 数据需要具备教学合理性，不能空洞敷衍。
+- [制品一致性] → 所有 spec 文件已与 integration 真实内容校对，ID 和字段均匹配
+- [loader 改动] → 仅增加目录存在性守卫，不影响现有加载逻辑；若需更完整的测试覆盖，可在后续 PR 中补充

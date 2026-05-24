@@ -1,40 +1,32 @@
-## 1. 创建专业目录与专业文件
+## 1. Loader 健壮性改进
 
-- [x] 1.1 创建 `content/majors/mechatronics-engineering/` 目录结构（jobs/、abilities/、tasks/、diagnostics/、learning-paths/）
-- [x] 1.2 创建 major.json（机械电子工程专业信息）
+- [x] 1.1 `src/lib/content/load-content.ts`：`readJsonDir()` 增加 `existsSync(dirPath)` 守卫，子目录不存在时返回空数组而非崩溃
 
-## 2. 创建岗位文件
+## 2. OpenSpec 变更制品
 
-- [x] 2.1 创建 jobs/mechatronics-engineer.json（机电工程师岗位）
+- [x] 2.1 创建 `proposal.md`（变更动机与范围）
+- [x] 2.2 创建 `design.md`（设计决策与内容映射表）
+- [x] 2.3 创建 `specs/mechatronics-major/spec.md`（mechatronics 专业）
+- [x] 2.4 创建 `specs/mechatronics-system-engineer-job/spec.md`（mechatronics-system-engineer 岗位）
+- [x] 2.5 创建 `specs/mechanical-design-basics/spec.md`（mechanical-design-basics 能力）
+- [x] 2.6 创建 `specs/sensor-and-measurement/spec.md`（sensor-and-measurement 能力）
+- [x] 2.7 创建 `specs/mechatronic-control/spec.md`（mechatronic-control 能力）
+- [x] 2.8 创建 `specs/plc-programming/spec.md`（plc-programming 能力）
+- [x] 2.9 创建 `specs/automated-conveyor-task/spec.md`（automated-conveyor-task 任务）
+- [x] 2.10 创建 `specs/mechatronics-diagnostic/spec.md`（mechatronics-basic 诊断）
+- [x] 2.11 创建 `specs/mechatronics-learning-path/spec.md`（mechatronics-beginner 学习路径）
+- [x] 2.12 创建 `tasks.md`（本文件）
 
-## 3. 创建能力节点文件
+## 3. 验证
 
-- [x] 3.1 创建 abilities/mechanical-design.json（机械设计基础）
-- [x] 3.2 创建 abilities/electrical-control.json（电气控制技术）
-- [x] 3.3 创建 abilities/sensor-detection.json（传感器与检测技术）
-- [x] 3.4 创建 abilities/mechatronics-integration.json（机电系统集成）
+- [ ] 3.1 运行 `npm run validate-content` 确认通过
+- [ ] 3.2 运行 `npm run typecheck` 确认通过
+- [ ] 3.3 运行 `npm run lint` 确认通过
+- [ ] 3.4 运行 `npm run build` 确认通过
 
-## 4. 创建学习任务文件
+## 4. 提交与 PR
 
-- [x] 4.1 创建 tasks/assembly-station-design.json（自动化装配工作站机电系统设计）
-
-## 5. 创建诊断题文件
-
-- [x] 5.1 创建 diagnostics/mechatronics-basic.json（机电工程师基础诊断，≥5题）
-
-## 6. 创建学习路径文件
-
-- [x] 6.1 创建 learning-paths/mechatronics-beginner.json（机电工程师入门路径）
-
-## 7. 验证
-
-- [x] 7.1 运行 `npm run validate-content` 确认通过
-- [x] 7.2 运行 `npm run typecheck` 确认通过
-- [x] 7.3 运行 `npm run lint` 确认通过
-- [x] 7.4 运行 `npm run build` 确认通过
-
-## 8. 提交与 PR
-
-- [x] 8.1 创建 feature 分支 `feature/issue-19-mechatronics-engineering`
-- [x] 8.2 提交变更并推送到远程
-- [x] 8.3 创建 PR 到 integration 分支，关联 Issue #19 (PR #59)
+- [x] 4.1 在 feature 分支 `feature/issue-19-mechatronics-engineering` 提交变更
+- [x] 4.2 创建 PR 到 integration 分支（PR #59）
+- [ ] 4.3 根据 codex review 反馈修改制品（ID 一致性、issue 关联修正）
+- [ ] 4.4 确认所有检查通过后请求合并
