@@ -1,0 +1,13 @@
+{
+  "id": "ml-deployment-guide",
+  "title": "机器学习模型部署指南",
+  "type": "article",
+  "description": "介绍模型序列化、FastAPI 服务封装和 Docker 容器化部署的实战指南。",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "部署指南模拟条目",
+      "note": "第一期仅登记资源类型，不指向真实文章。"
+    }
+  ]
+}
