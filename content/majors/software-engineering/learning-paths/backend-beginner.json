@@ -26,5 +26,12 @@
       "resourceIds": ["spring-boot-guide"],
       "expectedOutcome": "能设计 RESTful API 并使用 Spring Boot 实现基础接口。"
     }
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "后端开发工程师入门路径模拟数据",
+      "note": "第一期用于演示学习路径。"
+    }
   ]
 }
