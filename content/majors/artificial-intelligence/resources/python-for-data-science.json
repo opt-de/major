@@ -1,0 +1,13 @@
+{
+  "id": "python-for-data-science",
+  "title": "Python 数据科学入门",
+  "type": "course",
+  "description": "涵盖 Python 基础、NumPy、Pandas 和 Matplotlib 的数据科学入门课程材料占位。",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "课程资源模拟条目",
+      "note": "第一期仅登记资源类型，不指向真实课程文件。"
+    }
+  ]
+}
