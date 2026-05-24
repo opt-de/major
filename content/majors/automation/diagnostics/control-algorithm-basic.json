@@ -72,5 +72,12 @@
     { "abilityId": "controller-design", "weakBelow": 2, "feedback": "需要补充 PID 参数作用和性能指标关系。" },
     { "abilityId": "simulation-validation", "weakBelow": 1, "feedback": "需要练习从响应曲线提取性能指标。" },
     { "abilityId": "engineering-communication", "weakBelow": 1, "feedback": "需要训练报告证据组织。" }
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "控制算法工程师基础诊断模拟数据",
+      "note": "第一期用于演示诊断测验闭环。"
+    }
   ]
 }

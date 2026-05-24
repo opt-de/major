@@ -1,0 +1,13 @@
+{
+  "id": "data-structures-course",
+  "title": "数据结构与算法课程材料",
+  "type": "course",
+  "description": "用于支撑 Java 编程和系统设计学习的课程材料占位。",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "课程资源模拟条目",
+      "note": "第一期仅登记资源类型，不指向真实课程文件。"
+    }
+  ]
+}

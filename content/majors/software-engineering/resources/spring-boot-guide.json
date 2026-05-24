@@ -1,0 +1,13 @@
+{
+  "id": "spring-boot-guide",
+  "title": "Spring Boot 开发入门指南",
+  "type": "book",
+  "description": "后端开发框架参考资源，用于支撑 API 设计和实现任务。",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "教材资源模拟条目",
+      "note": "第一期仅登记资源类型，不指向真实教材。"
+    }
+  ]
+}
