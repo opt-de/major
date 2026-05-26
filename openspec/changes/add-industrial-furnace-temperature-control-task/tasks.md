@@ -15,5 +15,6 @@
 
 - [x] 3.1 在 feature 分支提交变更
 - [x] 3.2 创建 PR 到 integration 分支，关联 Issue #22 (PR #64)
-- [ ] 3.3 根据 review 反馈修改（如有）
-- [ ] 3.4 PR 合并后归档 OpenSpec 变更
+- [x] 3.3 补齐 spec delta：新增 `specs/automation-task-content/spec.md`（ADDED Requirements + 3 Scenarios）
+- [ ] 3.4 运行 `openspec validate ... --strict` 确认通过（本地无 CLI，由 reviewer 验证）
+- [ ] 3.5 PR 合并后归档 OpenSpec 变更
