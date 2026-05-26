@@ -1,0 +1,13 @@
+{
+  "id": "sensor-lab-guide",
+  "title": "传感器实验指导书",
+  "type": "course",
+  "description": "用于支撑传感器选型、信号调理和测量误差分析学习的实验资源占位。",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "实验资源模拟条目",
+      "note": "第一期仅作为学习路径资源占位。"
+    }
+  ]
+}

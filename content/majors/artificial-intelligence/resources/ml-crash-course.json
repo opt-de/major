@@ -1,0 +1,13 @@
+{
+  "id": "ml-crash-course",
+  "title": "机器学习速成课程",
+  "type": "course",
+  "description": "涵盖监督学习、无监督学习基础和 scikit-learn 实践的机器学习入门课程材料占位。",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "课程资源模拟条目",
+      "note": "第一期仅登记资源类型，不指向真实课程文件。"
+    }
+  ]
+}

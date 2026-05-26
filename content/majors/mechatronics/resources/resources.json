@@ -1,0 +1,13 @@
+{
+  "id": "mechanical-design-course",
+  "title": "机械设计基础课程材料",
+  "type": "course",
+  "description": "用于支撑传动方案设计、零件选型和强度校核学习的课程材料占位。",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "课程资源模拟条目",
+      "note": "第一期仅登记资源类型，不指向真实课程文件。"
+    }
+  ]
+}

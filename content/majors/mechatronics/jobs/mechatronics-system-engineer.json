@@ -1,0 +1,33 @@
+{
+  "id": "mechatronics-system-engineer",
+  "majorId": "mechatronics",
+  "name": "机电系统工程师",
+  "description": "面向智能装备、自动化产线和机电一体化产品，完成机械结构选型与设计、传感器选型与信号处理、传动系统控制方案设计、PLC程序开发与系统集成调试。",
+  "workScenarios": [
+    "自动化产线中传送带、机械臂等执行机构的机电系统设计",
+    "传感器选型、安装与信号采集方案制定",
+    "伺服电机、步进电机等传动系统的控制参数调试",
+    "PLC程序编写与HMI人机界面开发",
+    "机电设备故障诊断与系统联调"
+  ],
+  "typicalTasks": [
+    "根据工艺需求完成机械传动方案设计",
+    "选择合适的传感器并设计信号调理电路",
+    "编写PLC控制程序实现逻辑控制与运动控制",
+    "完成伺服驱动参数整定与系统联调",
+    "编写技术方案、调试记录和验收报告"
+  ],
+  "abilityIds": [
+    "mechanical-design-basics",
+    "sensor-and-measurement",
+    "mechatronic-control",
+    "plc-programming"
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "机电系统工程师岗位模拟描述",
+      "note": "用于第一期闭环演示，不代表真实招聘数据。"
+    }
+  ]
+}

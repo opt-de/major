@@ -1,0 +1,32 @@
+{
+  "id": "model-deployment",
+  "majorId": "artificial-intelligence",
+  "jobId": "ml-engineer",
+  "name": "模型工程化部署能力",
+  "level": "intermediate",
+  "description": "将训练好的机器学习模型封装为可对外服务的 API，理解基本的模型服务化与容器化部署流程。",
+  "knowledgePoints": [
+    "RESTful API 设计",
+    "模型序列化（pickle / joblib / ONNX）",
+    "Docker 容器化基础",
+    "模型服务监控基础"
+  ],
+  "skillPoints": [
+    "使用 Flask 或 FastAPI 将模型封装为 REST API",
+    "编写 Dockerfile 打包模型服务",
+    "编写接口调用示例和部署说明"
+  ],
+  "relatedCourses": ["Python 程序设计", "计算机网络"],
+  "prerequisites": ["机器学习建模基础", "Linux 基础操作"],
+  "evidenceExamples": [
+    "将一个文本分类模型部署为 Docker 容器化的 API 服务",
+    "编写包含请求示例和响应格式的接口文档"
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "模型部署能力模拟节点",
+      "note": "第一期演示能力节点。"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "plc-programming",
+  "majorId": "mechatronics",
+  "jobId": "mechatronics-system-engineer",
+  "name": "PLC编程与应用能力",
+  "level": "intermediate",
+  "description": "掌握PLC梯形图编程、I/O分配和常用功能指令，能够完成自动化设备的逻辑控制与顺序控制程序设计。",
+  "knowledgePoints": ["PLC硬件结构", "梯形图编程", "定时器与计数器", "步进顺序控制"],
+  "skillPoints": ["分配I/O地址", "编写梯形图程序", "使用定时器和计数器实现顺序控制", "调试和排故"],
+  "relatedCourses": ["PLC原理及应用", "电气控制技术"],
+  "prerequisites": ["数字电路基础", "传感器与测量技术"],
+  "evidenceExamples": ["编写传送带启停与调速的梯形图程序", "实现多工位顺序动作控制"],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "PLC编程与应用能力模拟节点",
+      "note": "第一期演示能力节点。"
+    }
+  ]
+}

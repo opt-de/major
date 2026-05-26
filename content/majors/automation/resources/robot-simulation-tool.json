@@ -1,0 +1,13 @@
+{
+  "id": "robot-simulation-tool",
+  "title": "机器人仿真工具",
+  "type": "tool",
+  "description": "使用 MATLAB Robotics Toolbox 或 Python Robotics 工具箱进行运动学和轨迹仿真。",
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "机器人仿真工具模拟资源",
+      "note": "第一期作为仿真工具资源占位。"
+    }
+  ]
+}
