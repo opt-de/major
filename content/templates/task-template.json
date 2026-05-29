@@ -15,6 +15,14 @@
       "levels": ["基础", "合格", "优秀"]
     }
   ],
+  "commonErrors": [
+    {
+      "error": "错误名称",
+      "symptoms": "现象描述",
+      "diagnosis": "诊断方法",
+      "fix": "修复方法"
+    }
+  ],
   "safetyOrEthicsNotes": ["安全或伦理说明"],
   "estimatedTime": "预计耗时",
   "sourceRefs": [

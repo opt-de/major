@@ -13,6 +13,9 @@ const eslintConfig = defineConfig([
     'next-env.d.ts',
     '.code-review-graph/**',
     '.codex/**',
+    '.claude/**',
+    '.gemini/**',
+    '.qoder/**',
   ]),
 ]);
 

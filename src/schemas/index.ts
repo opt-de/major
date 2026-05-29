@@ -61,6 +61,13 @@ export const abilitySchema = z.object({
   sourceRefs: z.array(sourceRefSchema).min(1),
 });
 
+export const commonErrorSchema = z.object({
+  error: z.string().min(1),
+  symptoms: z.string().min(1),
+  diagnosis: z.string().min(1),
+  fix: z.string().min(1),
+});
+
 export const learningTaskSchema = z.object({
   id: z.string().min(1),
   majorId: z.string().min(1),
@@ -72,6 +79,7 @@ export const learningTaskSchema = z.object({
   steps: z.array(z.string().min(1)).min(1),
   deliverables: z.array(z.string().min(1)).min(1),
   rubric: z.array(rubricItemSchema).min(1),
+  commonErrors: z.array(commonErrorSchema).optional(),
   safetyOrEthicsNotes: z.array(z.string().min(1)),
   estimatedTime: z.string().min(1),
   sourceRefs: z.array(sourceRefSchema).min(1),
