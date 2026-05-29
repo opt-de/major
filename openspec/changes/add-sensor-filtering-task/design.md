@@ -18,7 +18,7 @@
 |---------|------|
 | `industrial-data-wrangling` | 数据加载、清洗、预处理 |
 | `statistical-analysis` | 统计方法用于异常检测 |
-| `simulation-validation` | 验证滤波算法效果 |
+| `data-visualization-communication` | 数据可视化与报告 |
 
 ### 任务步骤
 

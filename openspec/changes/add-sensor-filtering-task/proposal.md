@@ -11,7 +11,7 @@
 ## Scope
 
 - 在 `content/majors/automation/tasks/` 下新增任务卡 JSON 文件
-- 关联已有能力节点：`industrial-data-wrangling`、`statistical-analysis`、`simulation-validation`
+- 关联已有能力节点：`industrial-data-wrangling`、`statistical-analysis`、`data-visualization-communication`
 - 遵循现有任务卡格式和 schema
 
 ## Out of Scope
