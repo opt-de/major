@@ -1,7 +1,11 @@
 # Spec: sensor-filtering-task-content
 
-## Requirements
+## ADDED Requirements
 
+#### Scenario:
+某化工厂的反应釜温度传感器采集数据包含高频噪声，且偶发异常尖峰信号。工艺团队需要对原始数据进行滤波处理以获得可靠的温度趋势，并检测异常数据点以排查传感器故障或工艺异常。
+
+#### Fields:
 任务卡必须包含以下字段：
 - `id`: 唯一标识符，kebab-case
 - `majorId`: 所属专业 ID
@@ -17,8 +21,7 @@
 - `estimatedTime`: 预计耗时
 - `sourceRefs`: 数据来源引用
 
-## Constraints
-
+#### Constraints:
 - 必须通过 schema 验证
 - 关联的能力节点必须已存在
 - 数据来源必须标注为 mock 或真实来源
