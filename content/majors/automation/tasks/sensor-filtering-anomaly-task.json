@@ -2,7 +2,7 @@
   "id": "sensor-filtering-anomaly-task",
   "majorId": "automation",
   "jobId": "industrial-data-analyst",
-  "abilityIds": ["industrial-data-wrangling", "statistical-analysis", "simulation-validation"],
+  "abilityIds": ["industrial-data-wrangling", "statistical-analysis", "data-visualization-communication"],
   "title": "传感器数据滤波与异常检测",
   "scenario": "某化工厂的反应釜温度传感器采集数据包含高频噪声，且偶发异常尖峰信号。工艺团队需要对原始数据进行滤波处理以获得可靠的温度趋势，并检测异常数据点以排查传感器故障或工艺异常。学习者需要实现多种滤波算法，设计异常检测方案，并通过仿真验证算法效果。",
   "objectives": [
