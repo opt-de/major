@@ -79,7 +79,7 @@ export const learningTaskSchema = z.object({
   steps: z.array(z.string().min(1)).min(1),
   deliverables: z.array(z.string().min(1)).min(1),
   rubric: z.array(rubricItemSchema).min(1),
-  commonErrors: z.array(commonErrorSchema).optional(),
+  commonErrors: z.array(commonErrorSchema).min(1).optional(),
   safetyOrEthicsNotes: z.array(z.string().min(1)),
   estimatedTime: z.string().min(1),
   sourceRefs: z.array(sourceRefSchema).min(1),
