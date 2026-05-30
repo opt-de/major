@@ -1,18 +1,17 @@
 ## Why
 
-为机器人方向的学习者提供实战练习，帮助他们掌握路径规划算法（A*、RRT）及其在小型机器人上的应用，提升算法实现与仿真能力。
+为机器人方向的学习者提供一个 **学习任务卡**，使其能够在已有的 `robot-path-planning` 能力框架下，练习路径规划的概念、输入/输出约束与评价标准。此变更仅涉及内容层面的新增，不包括实际的路径规划算法实现或 API 开发。
 
 ## What Changes
 
-- 新增学习任务卡 `small-robot-path-planning`，包含任务目标、输入输出约束、步骤说明、评价 rubrics 与拓展挑战。
-- 引入对应的能力引用 `robot-path-planning`（已在 content/majors/automation/abilities/robot-path-planning.json 中定义）。
-- 更新 `content/majors/automation/tasks/` 目录，添加任务 JSON 文件。
-- 更新任务索引以在前端展示该任务卡。
+- 新增学习任务卡 `small-robot-path-planning.json`，包含任务目标、输入输出约束、步骤说明、评价 rubrics 与拓展挑战。
+- 在 `content/majors/automation/tasks/` 目录下添加上述 JSON 文件。
+- 更新任务索引，使前端能够在任务列表中展示该任务卡。
 
 ## Capabilities
 
 ### New Capabilities
-- `robot-path-planning-experiment`: 为小型机器人路径规划实验提供需求说明，定义实验输入（网格地图、起点/终点）、输出（无碰撞路径、优化指标）以及评价标准。
+- `robot-path-planning-experiment`：定义实验的需求说明（输入网格、起点/终点、输出路径及质量指标），供学习者参考。
 
 ### Modified Capabilities
 - *(无需修改已存在的能力规格)*
@@ -21,4 +20,4 @@
 
 - 前端任务卡页面将新增该任务的展示，使用现有 `TaskCard` 组件渲染。
 - 内容加载与校验脚本 (`npm run validate-content`) 将校验新任务 JSON 的结构符合 Zod schema。
-- 不涉及代码逻辑改变，仅为内容层面的新增。
+- **不涉及任何后端代码或算法实现**，仅为内容层面的新增。
