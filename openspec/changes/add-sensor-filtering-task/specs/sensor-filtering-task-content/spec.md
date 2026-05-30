@@ -12,7 +12,7 @@
 - **THEN** 必须包含以下字段：
   - `id`: 唯一标识符，kebab-case
   - `majorId`: 所属专业 ID
-  - `jobId`: 关联岗位 ID（可选）
+  - `jobId`: 关联岗位 ID
   - `abilityIds`: 关联能力 ID 列表，至少 2 个
   - `title`: 任务标题
   - `scenario`: 任务情境描述
