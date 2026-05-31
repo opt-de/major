@@ -7,77 +7,167 @@
     {
       "id": "q1",
       "abilityId": "system-modeling",
-      "prompt": "一阶惯性环节的时间常数主要影响什么？",
+      "prompt": "一阶惯性环节的时间常数 T 增大时，系统的响应速度会如何变化？",
       "type": "single-choice",
       "options": [
-        { "id": "a", "text": "响应速度" },
-        { "id": "b", "text": "采样频率单位" },
-        { "id": "c", "text": "传感器颜色" }
+        { "id": "a", "text": "变慢" },
+        { "id": "b", "text": "变快" },
+        { "id": "c", "text": "不变" }
       ],
       "answer": "a",
-      "explanation": "时间常数越大，典型响应越慢。"
+      "explanation": "一阶惯性环节 G(s)=K/(Ts+1) 中，时间常数 T 越大，极点离虚轴越近，阶跃响应达到稳态的时间越长，响应越慢。这对应 system-modeling 能力中「一阶惯性环节」知识点的理解。",
+      "difficulty": "basic"
     },
     {
       "id": "q2",
-      "abilityId": "controller-design",
-      "prompt": "PID 中的积分环节常用于减小稳态误差。",
+      "abilityId": "system-modeling",
+      "prompt": "传递函数描述的是系统在零初始条件下输出与输入的拉普拉斯变换之比。",
       "type": "true-false",
       "options": [
         { "id": "true", "text": "正确" },
         { "id": "false", "text": "错误" }
       ],
       "answer": "true",
-      "explanation": "积分作用可累积误差并改善稳态误差。"
+      "explanation": "传递函数定义为在零初始条件下线性定常系统输出量的拉普拉斯变换与输入量的拉普拉斯变换之比。这是 system-modeling 能力中「传递函数」知识点的基本概念。",
+      "difficulty": "basic"
     },
     {
       "id": "q3",
-      "abilityId": "simulation-validation",
-      "prompt": "比较控制方案时只看最终稳态值即可，不需要看超调和调节时间。",
-      "type": "true-false",
+      "abilityId": "system-modeling",
+      "prompt": "给一个稳定的二阶系统施加单位阶跃输入，稳态输出值为 2，则系统的静态增益 K 是多少？",
+      "type": "single-choice",
       "options": [
-        { "id": "true", "text": "正确" },
-        { "id": "false", "text": "错误" }
+        { "id": "a", "text": "0.5" },
+        { "id": "b", "text": "2" },
+        { "id": "c", "text": "无法确定" }
       ],
-      "answer": "false",
-      "explanation": "超调、调节时间和稳态误差都影响工程可用性。"
+      "answer": "b",
+      "explanation": "对于单位阶跃输入（幅值为1），稳态输出 y(∞)=K·1=K，因此 K=2。这考察 system-modeling 能力中「单位阶跃响应」的理解和参数识别分析能力。",
+      "difficulty": "intermediate"
     },
     {
       "id": "q4",
-      "abilityId": "engineering-communication",
-      "prompt": "工程报告中最需要保留哪类信息？",
+      "abilityId": "controller-design",
+      "prompt": "PID 控制器中，增大比例系数 Kp 通常会减小稳态误差，但也可能引起什么不利影响？",
       "type": "single-choice",
       "options": [
-        { "id": "a", "text": "设计依据、参数和验证结果" },
-        { "id": "b", "text": "只写最终结论" },
-        { "id": "c", "text": "只写软件截图" }
+        { "id": "a", "text": "系统的超调量增大、稳定性下降" },
+        { "id": "b", "text": "采样周期变长" },
+        { "id": "c", "text": "传感器精度下降" }
       ],
       "answer": "a",
-      "explanation": "工程表达需要可追溯证据。"
+      "explanation": "增大 Kp 提高控制作用强度，可减小稳态误差，但过大会导致超调量增大、振荡加剧甚至不稳定。这对应 controller-design 能力中「PID 控制」和「超调量」知识点。",
+      "difficulty": "basic"
     },
     {
       "id": "q5",
       "abilityId": "controller-design",
-      "prompt": "控制器参数整定需要结合性能目标和对象特性。",
+      "prompt": "PID 控制器引入积分环节 I 的主要目的是减小稳态误差。",
       "type": "true-false",
       "options": [
         { "id": "true", "text": "正确" },
         { "id": "false", "text": "错误" }
       ],
       "answer": "true",
-      "explanation": "参数整定必须服务于具体对象和性能目标。"
+      "explanation": "积分环节对误差进行累积，即使误差很小也会持续产生控制量，从而消除稳态误差。这对应 controller-design 能力中「稳态误差」和「PID 控制」知识点。",
+      "difficulty": "basic"
+    },
+    {
+      "id": "q6",
+      "abilityId": "controller-design",
+      "prompt": "控制器参数整定时，若调节时间过长，应该优先调整哪个 PID 参数？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "增大 Kp，适当调整 Kd" },
+        { "id": "b", "text": "增大 Ki" },
+        { "id": "c", "text": "只减小采样周期" }
+      ],
+      "answer": "a",
+      "explanation": "调节时间过长说明响应过慢，增大 Kp 可提高响应速度，配合微分 Kd 可抑制因此产生的超调。这对应 controller-design 能力中「调节时间」和「整定控制参数」技能点。",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "q7",
+      "abilityId": "simulation-validation",
+      "prompt": "从阶跃响应曲线中，超调量 σ% 的计算公式为：(峰值 - 稳态值) / 稳态值 × 100%。",
+      "type": "true-false",
+      "options": [
+        { "id": "true", "text": "正确" },
+        { "id": "false", "text": "错误" }
+      ],
+      "answer": "true",
+      "explanation": "超调量是衡量系统相对稳定性的重要指标，定义为响应峰值超过稳态值的百分比。这考察 simulation-validation 能力中「性能指标」的提取方法。",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "q8",
+      "abilityId": "simulation-validation",
+      "prompt": "仿真时发现闭环响应存在持续振荡，以下哪项是合理的排查方向？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "检查增益裕量是否不足，降低 Kp 或增加相位补偿" },
+        { "id": "b", "text": "直接删除振荡数据" },
+        { "id": "c", "text": "增大采样时间掩盖振荡" }
+      ],
+      "answer": "a",
+      "explanation": "持续振荡通常意味着稳定裕量不足或接近临界稳定。应检查频率特性并调整控制器参数。这对应 simulation-validation 能力中「解释异常响应」技能点。",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "q9",
+      "abilityId": "engineering-communication",
+      "prompt": "编写工程报告时，以下哪种做法是正确的？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "仅记录成功的方案，忽略失败尝试" },
+        { "id": "b", "text": "说明设计依据、参数选择理由和验证结果" },
+        { "id": "c", "text": "只放仿真截图，不写文字说明" }
+      ],
+      "answer": "b",
+      "explanation": "工程报告需要可追溯：设计依据、参数选择理由、验证结果都应完整记录。这对应 engineering-communication 能力中「工程报告结构」和「整理设计依据」知识点。",
+      "difficulty": "basic"
+    },
+    {
+      "id": "q10",
+      "abilityId": "engineering-communication",
+      "prompt": "在工程报告中说明控制方案的局限性是正确的做法，因为所有方案都有适用边界。",
+      "type": "true-false",
+      "options": [
+        { "id": "true", "text": "正确" },
+        { "id": "false", "text": "错误" }
+      ],
+      "answer": "true",
+      "explanation": "如实说明方案的适用条件、限制和风险是工程表达的基本要求。这对应 engineering-communication 能力中「风险说明」和「表达限制条件」知识点。",
+      "difficulty": "basic"
     }
   ],
   "scoringRules": [
-    { "abilityId": "system-modeling", "weakBelow": 1, "feedback": "需要复习一阶系统建模和响应参数。" },
-    { "abilityId": "controller-design", "weakBelow": 2, "feedback": "需要补充 PID 参数作用和性能指标关系。" },
-    { "abilityId": "simulation-validation", "weakBelow": 1, "feedback": "需要练习从响应曲线提取性能指标。" },
-    { "abilityId": "engineering-communication", "weakBelow": 1, "feedback": "需要训练报告证据组织。" }
+    {
+      "abilityId": "system-modeling",
+      "weakBelow": 2,
+      "feedback": "需要加强控制系统建模基础：复习一阶惯性环节特性、传递函数定义和阶跃响应分析。"
+    },
+    {
+      "abilityId": "controller-design",
+      "weakBelow": 2,
+      "feedback": "需要加强控制器设计能力：重点复习 PID 各环节作用、稳态误差分析和参数整定方法。"
+    },
+    {
+      "abilityId": "simulation-validation",
+      "weakBelow": 1,
+      "feedback": "需要加强仿真验证能力：练习从阶跃响应曲线提取超调量、调节时间等性能指标，并学会根据异常响应调整方案。"
+    },
+    {
+      "abilityId": "engineering-communication",
+      "weakBelow": 1,
+      "feedback": "需要加强工程表达能力：学习结构化工程报告的编写规范，注重设计依据、验证证据和风险说明。"
+    }
   ],
   "sourceRefs": [
     {
       "type": "mock",
-      "title": "控制算法工程师基础诊断模拟数据",
-      "note": "第一期用于演示诊断测验闭环。"
+      "title": "控制算法工程师基础诊断题模拟数据",
+      "note": "第一期用于教学演示，题目基于自动控制原理常见知识点编写，不代表真实认证考试。"
     }
   ]
 }

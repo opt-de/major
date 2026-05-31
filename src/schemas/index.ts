@@ -96,6 +96,7 @@ export const diagnosticQuestionSchema = z.object({
   })).min(2),
   answer: z.string().min(1),
   explanation: z.string().min(1),
+  difficulty: z.enum(['basic', 'intermediate', 'advanced']).optional(),
 });
 
 export const scoringRuleSchema = z.object({
