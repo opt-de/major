@@ -10,7 +10,10 @@ export function generateTaskCard(input: {
   const content = loadContent();
   const job = content.jobs.find((item) => item.id === input.jobId);
   const abilities = content.abilities.filter((item) => input.abilityIds.includes(item.id));
-  const template = content.tasks[0];
+  const template =
+    content.tasks.find((t) => t.jobId === input.jobId) ??
+    content.tasks.find((t) => t.majorId === input.majorId) ??
+    content.tasks[0];
 
   if (!job || abilities.length === 0 || !template) {
     throw new Error('insufficient content for task generation');

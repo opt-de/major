@@ -46,6 +46,6 @@
 
 ## 10. 提交与 PR
 
-- [ ] 10.1 确认在 `feature/issue-19-mechatronics` 分支上
-- [ ] 10.2 提交所有变更，commit message 遵循 `[Issue #19] Add mechatronics major content pack`
-- [ ] 10.3 推送到远程并创建 PR 到 `integration` 分支，关联 Issue #19
+- [x] 10.1 确认在 `feature/issue-19-mechatronics` 分支上
+- [x] 10.2 提交所有变更，commit message 遵循 `[Issue #19] Add mechatronics major content pack`
+- [x] 10.3 推送到远程并创建 PR 到 `integration` 分支，关联 Issue #19

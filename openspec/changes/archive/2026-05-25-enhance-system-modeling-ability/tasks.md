@@ -17,5 +17,5 @@
 
 - [x] 3.1 在 feature 分支 `feature/issue-20-system-modeling` 提交变更
 - [x] 3.2 创建 PR 到 integration 分支，关联 Issue #20 (PR #60)
-- [ ] 3.3 根据 codex review 反馈修改（如有）
-- [ ] 3.4 PR 合并后归档 OpenSpec 变更
+- [x] 3.3 根据 codex review 反馈修改（如有）
+- [x] 3.4 PR 合并后归档 OpenSpec 变更
