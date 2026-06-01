@@ -16,7 +16,7 @@
 
 ## 3. 提交与 PR
 
-- [ ] 3.1 在 feature 分支 `feature/issue-27-embedded-diagnostic` 提交变更
-- [ ] 3.2 创建 PR 到 integration 分支，关联 Issue #27
+- [x] 3.1 在 feature 分支 `feature/issue-27-embedded-diagnostic` 提交变更
+- [x] 3.2 创建 PR 到 integration 分支，关联 Issue #27 (PR #73)
 - [ ] 3.3 根据 codex review 反馈修改（如有）
 - [ ] 3.4 PR 合并后归档 OpenSpec 变更
