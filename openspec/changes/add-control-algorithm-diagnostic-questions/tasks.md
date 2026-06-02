@@ -20,6 +20,6 @@
 
 ## 4. 提交与 PR
 
-- [ ] 4.1 提交变更到 `feature/issue-26-control-algorithm-diagnostic` 分支
-- [ ] 4.2 推送并创建 PR 到 `integration` 分支，关联 Issue #26
+- [x] 4.1 提交变更到 `feature/issue-26-control-algorithm-diagnostic` 分支
+- [x] 4.2 推送并创建 PR 到 `integration` 分支，关联 Issue #26
 - [ ] 4.3 根据 review 反馈修改（如有）
