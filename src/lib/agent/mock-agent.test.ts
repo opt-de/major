@@ -38,11 +38,16 @@ describe('mock agent', () => {
     const result = diagnose({
       diagnosticId: 'control-algorithm-basic',
       answers: {
-        q1: 'b',
-        q2: 'true',
-        q3: 'false',
+        q1: 'c',
+        q2: 'false',
+        q3: 'c',
         q4: 'a',
-        q5: 'false',
+        q5: 'true',
+        q6: 'a',
+        q7: 'false',
+        q8: 'b',
+        q9: 'a',
+        q10: 'false',
       },
     });
 
