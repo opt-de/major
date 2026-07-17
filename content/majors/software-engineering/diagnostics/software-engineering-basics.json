@@ -1,0 +1,175 @@
+{
+  "id": "software-engineering-basics",
+  "majorId": "software-engineering",
+  "jobId": "backend-developer",
+  "title": "软件工程专业项目开发基础诊断",
+  "questions": [
+    {
+      "id": "q1",
+      "abilityId": "java-programming",
+      "prompt": "在 Git 中，哪个命令用于将当前修改暂存到暂存区？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "git add <file>" },
+        { "id": "b", "text": "git commit <file>" },
+        { "id": "c", "text": "git push <file>" },
+        { "id": "d", "text": "git branch <file>" }
+      ],
+      "answer": "a",
+      "explanation": "git add 将工作区的文件变更添加到暂存区，是提交前的必要步骤。git commit 才是真正创建提交。"
+    },
+    {
+      "id": "q2",
+      "abilityId": "engineering-collaboration",
+      "prompt": "团队开发中，发现远程分支有新的提交但本地没有，应该使用哪个命令同步？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "git status" },
+        { "id": "b", "text": "git fetch && git merge origin/main" },
+        { "id": "c", "text": "git clone" },
+        { "id": "d", "text": "git init" }
+      ],
+      "answer": "b",
+      "explanation": "git fetch 拉取远程更新但不合并，git merge 将远程分支合并到当前分支。这是团队协作的标准同步流程。"
+    },
+    {
+      "id": "q3",
+      "abilityId": "system-design",
+      "prompt": "需求分析阶段，以下哪项做法最能帮助准确理解客户需求？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "直接开始编写代码，边写边调整" },
+        { "id": "b", "text": "与客户共同编写用户故事和验收标准" },
+        { "id": "c", "text": "仅凭经验推测客户想要什么" },
+        { "id": "d", "text": "复制上一个项目的代码稍作修改" }
+      ],
+      "answer": "b",
+      "explanation": "用户故事（User Story）和验收标准（Acceptance Criteria）能将模糊需求转化为可验证的具体描述，减少沟通偏差。"
+    },
+    {
+      "id": "q4",
+      "abilityId": "system-design",
+      "prompt": "以下关于需求优先级划分的说法，正确的是：",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "所有需求同等重要，应按顺序逐一实现" },
+        { "id": "b", "text": "使用 MoSCoW 法则（Must/Should/Could/Won't）进行优先级排序" },
+        { "id": "c", "text": "只关注客户口头提到的需求，忽略文档" },
+        { "id": "d", "text": "由开发人员自行决定哪些需求重要" }
+      ],
+      "answer": "b",
+      "explanation": "MoSCoW 法则是经典的需求优先级管理方法：Must（必须有）、Should（应该有）、Could（可以有）、Won't（本次不做）。"
+    },
+    {
+      "id": "q5",
+      "abilityId": "system-design",
+      "prompt": "在设计 RESTful API 时，以下哪项是最佳实践？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "所有接口使用 POST 方法" },
+        { "id": "b", "text": "使用名词而非动词命名资源路径，如 GET /users 而非 GET /getUsers" },
+        { "id": "c", "text": "将业务逻辑直接写在控制器中" },
+        { "id": "d", "text": "所有响应统一返回 200 状态码" }
+      ],
+      "answer": "b",
+      "explanation": "RESTful API 最佳实践包括使用名词复数形式命名资源路径（/users 而非 /getUsers），利用 HTTP 方法（GET/POST/PUT/DELETE）表达操作语义，以及合理使用状态码。"
+    },
+    {
+      "id": "q6",
+      "abilityId": "database-design",
+      "prompt": "Java 应用连接数据库时抛出 SQLException，以下哪项是最合理的排查方向？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "检查数据库 URL、用户名、密码配置是否正确" },
+        { "id": "b", "text": "立即格式化硬盘重装系统" },
+        { "id": "c", "text": "忽略异常继续执行" },
+        { "id": "d", "text": "删除所有日志文件" }
+      ],
+      "answer": "a",
+      "explanation": "数据库连接失败最常见的原因是配置错误：URL 格式不正确、用户名密码不匹配、数据库服务未启动或防火墙阻止连接。应首先检查配置文件和数据库服务状态。"
+    },
+    {
+      "id": "q7",
+      "abilityId": "java-programming",
+      "prompt": "对以下函数进行单元测试，哪个测试用例最能发现边界问题？\n\npublic int clamp(int value, int min, int max) {\n    if (value < min) return min;\n    if (value > max) return max;\n    return value;\n}",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "仅测试 value 在 min 和 max 之间的正常值" },
+        { "id": "b", "text": "测试 value == min、value == max、value < min、value > max、value == Integer.MIN_VALUE 和 value == Integer.MAX_VALUE" },
+        { "id": "c", "text": "只测试 value > max 的情况" },
+        { "id": "d", "text": "测试不同的 min 和 max 变量名组合" }
+      ],
+      "answer": "b",
+      "explanation": "边界值分析和等价类划分是发现边缘问题的关键：需要覆盖等于边界、超出边界以及整型极值等情况。"
+    },
+    {
+      "id": "q8",
+      "abilityId": "engineering-collaboration",
+      "prompt": "以下关于软件测试的说法，错误的是：",
+      "type": "true-false",
+      "options": [
+        { "id": "true", "text": "测试可以证明程序有错误，但不能证明程序没有错误" },
+        { "id": "false", "text": "100% 的代码覆盖率可以保证程序完全没有缺陷" }
+      ],
+      "answer": "false",
+      "explanation": "即使达到 100% 代码覆盖率，仍可能存在逻辑错误、竞态条件、边界条件遗漏等缺陷。测试只能发现缺陷，不能证明无缺陷。"
+    },
+    {
+      "id": "q9",
+      "abilityId": "java-programming",
+      "prompt": "以下 Java 代码违反了哪条常见编码规范？\n\npublic String getUserEmail(String userId) {\n    User user = userRepository.findById(userId).orElse(null);\n    return user.getEmail();\n}",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "未判空导致可能抛出 NullPointerException" },
+        { "id": "b", "text": "方法名过长" },
+        { "id": "c", "text": "缺少 import 语句" },
+        { "id": "d", "text": "没有使用设计模式" }
+      ],
+      "answer": "a",
+      "explanation": "orElse(null) 会返回 null 引用，此时在 null 上调用 .getEmail() 会抛出 NullPointerException。应使用 orElseThrow 或 inPresent 回调安全获取结果。这是 Java 编码中常见的空指针预防规范。"
+    },
+    {
+      "id": "q10",
+      "abilityId": "engineering-collaboration",
+      "prompt": "代码审查（Code Review）时，发现同事的代码功能正确但缺少注释和错误处理。以下哪种反馈方式最专业？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "直接强制合并，不提出任何意见" },
+        { "id": "b", "text": "在 PR 中逐条列出改进建议，说明缺少注释和错误处理可能带来的维护风险，并提供修改示例" },
+        { "id": "c", "text": "在群里公开批评代码质量差" },
+        { "id": "d", "text": "自己默默重写整个模块，不通知原作者" }
+      ],
+      "answer": "b",
+      "explanation": "专业的 Code Review 应具体指出问题、说明风险原因、提供可操作的改进建议，并保持尊重和建设性的语气。"
+    }
+  ],
+  "scoringRules": [
+    {
+      "abilityId": "java-programming",
+      "weakBelow": 1,
+      "feedback": "Java 编程基础薄弱，需加强编码规范、空指针预防和单元测试技能。"
+    },
+    {
+      "abilityId": "system-design",
+      "weakBelow": 2,
+      "feedback": "系统设计与需求分析能力不足，需学习用户故事编写、需求优先级管理和 RESTful API 设计规范。"
+    },
+    {
+      "abilityId": "database-design",
+      "weakBelow": 1,
+      "feedback": "数据库知识不够扎实，需复习数据库连接配置和常见异常排查方法。"
+    },
+    {
+      "abilityId": "engineering-collaboration",
+      "weakBelow": 2,
+      "feedback": "工程协作与沟通能力有待提升，需学习 Git 团队协作流程、测试质量意识和 Code Review 规范。"
+    }
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "软件工程专业项目开发基础诊断模拟数据",
+      "note": "第一期用于演示诊断测验闭环，题目基于软件工程常见知识点编写，不代表真实认证考试。"
+    }
+  ]
+}
