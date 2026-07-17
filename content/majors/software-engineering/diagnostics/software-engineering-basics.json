@@ -1,14 +1,12 @@
-{
+﻿{
   "id": "software-engineering-basics",
-  "majorId": "automation",
-  "jobId": "embedded-software-engineer",
-"learningPathld":
-"control-algorithm-engineering",
-  "title": "软件工程专业基础诊断",
+  "majorId": "software-engineering",
+  "jobId": "backend-developer",
+  "title": "软件工程专业项目开发基础诊断",
   "questions": [
     {
       "id": "q1",
-      "abilityId": "embedded-c-programming",
+      "abilityId": "java-programming",
       "prompt": "在 Git 中，哪个命令用于将当前修改暂存到暂存区？",
       "type": "single-choice",
       "options": [
@@ -22,7 +20,7 @@
     },
     {
       "id": "q2",
-      "abilityId": "embedded-c-programming",
+      "abilityId": "engineering-collaboration",
       "prompt": "团队开发中，发现远程分支有新的提交但本地没有，应该使用哪个命令同步？",
       "type": "single-choice",
       "options": [
@@ -36,7 +34,7 @@
     },
     {
       "id": "q3",
-      "abilityId": "system-modeling",
+      "abilityId": "system-design",
       "prompt": "需求分析阶段，以下哪项做法最能帮助准确理解客户需求？",
       "type": "single-choice",
       "options": [
@@ -50,8 +48,8 @@
     },
     {
       "id": "q4",
-      "abilityId": "system-modeling",
-      "prompt": "以下关于需求优先级划分的说法，正确的是？",
+      "abilityId": "system-design",
+      "prompt": "以下关于需求优先级划分的说法，正确的是：",
       "type": "single-choice",
       "options": [
         { "id": "a", "text": "所有需求同等重要，应按顺序逐一实现" },
@@ -64,50 +62,50 @@
     },
     {
       "id": "q5",
-      "abilityId": "embedded-interface-comm",
-      "prompt": "设计一个传感器数据采集接口时，以下哪个做法最符合接口设计规范？",
+      "abilityId": "system-design",
+      "prompt": "在设计 RESTful API 时，以下哪项是最佳实践？",
       "type": "single-choice",
       "options": [
-        { "id": "a", "text": "直接在主循环中调用传感器读取函数，不封装" },
-        { "id": "b", "text": "定义统一的 read_sensor(sensor_id, buffer, len) 函数并声明头文件" },
-        { "id": "c", "text": "将传感器驱动代码全部写在 main.c 中" },
-        { "id": "d", "text": "使用全局变量传递传感器数据，不通过函数参数" }
+        { "id": "a", "text": "所有接口使用 POST 方法" },
+        { "id": "b", "text": "使用名词而非动词命名资源路径，如 GET /users 而非 GET /getUsers" },
+        { "id": "c", "text": "将业务逻辑直接写在控制器中" },
+        { "id": "d", "text": "所有响应统一返回 200 状态码" }
       ],
       "answer": "b",
-      "explanation": "良好的接口设计应封装实现细节，提供清晰的函数签名和头文件声明，便于单元测试和模块复用。"
+      "explanation": "RESTful API 最佳实践包括使用名词复数形式命名资源路径（/users 而非 /getUsers），利用 HTTP 方法（GET/POST/PUT/DELETE）表达操作语义，以及合理使用状态码。"
     },
     {
       "id": "q6",
-      "abilityId": "embedded-interface-comm",
-      "prompt": "在嵌入式系统中，I2C 总线上两个设备通信失败，最可能的原因是？",
+      "abilityId": "database-design",
+      "prompt": "Java 应用连接数据库时抛出 SQLException，以下哪项是最合理的排查方向？",
       "type": "single-choice",
       "options": [
-        { "id": "a", "text": "设备的 I2C 地址配置不一致或上拉电阻缺失" },
-        { "id": "b", "text": "CPU 主频过高" },
-        { "id": "c", "text": "Flash 存储空间不足" },
-        { "id": "d", "text": "电源电压偏高 0.1V" }
+        { "id": "a", "text": "检查数据库 URL、用户名、密码配置是否正确" },
+        { "id": "b", "text": "立即格式化硬盘重装系统" },
+        { "id": "c", "text": "忽略异常继续执行" },
+        { "id": "d", "text": "删除所有日志文件" }
       ],
       "answer": "a",
-      "explanation": "I2C 通信依赖正确的从机地址匹配和总线上拉电阻维持信号电平，地址不匹配或上拉缺失是最常见的通信故障原因。"
+      "explanation": "数据库连接失败最常见的原因是配置错误：URL 格式不正确、用户名密码不匹配、数据库服务未启动或防火墙阻止连接。应首先检查配置文件和数据库服务状态。"
     },
     {
       "id": "q7",
-      "abilityId": "embedded-debugging",
-      "prompt": "对以下函数进行单元测试，哪个测试用例最能发现边界问题？\n\nint clamp(int value, int min, int max) {\n    if (value < min) return min;\n    if (value > max) return max;\n    return value;\n}",
+      "abilityId": "java-programming",
+      "prompt": "对以下函数进行单元测试，哪个测试用例最能发现边界问题？\n\npublic int clamp(int value, int min, int max) {\n    if (value < min) return min;\n    if (value > max) return max;\n    return value;\n}",
       "type": "single-choice",
       "options": [
         { "id": "a", "text": "仅测试 value 在 min 和 max 之间的正常值" },
-        { "id": "b", "text": "测试 value == min、value == max、value < min、value > max、value == INT_MIN 和 value == INT_MAX" },
+        { "id": "b", "text": "测试 value == min、value == max、value < min、value > max、value == Integer.MIN_VALUE 和 value == Integer.MAX_VALUE" },
         { "id": "c", "text": "只测试 value > max 的情况" },
         { "id": "d", "text": "测试不同的 min 和 max 变量名组合" }
       ],
       "answer": "b",
-      "explanation": "边界值分析和等价类划分是发现边缘问题的关键：需覆盖等于边界、超出边界以及整型极值等情况。"
+      "explanation": "边界值分析和等价类划分是发现边缘问题的关键：需要覆盖等于边界、超出边界以及整型极值等情况。"
     },
     {
       "id": "q8",
-      "abilityId": "embedded-debugging",
-      "prompt": "以下关于软件测试的说法，错误的是？",
+      "abilityId": "engineering-collaboration",
+      "prompt": "以下关于软件测试的说法，错误的是：",
       "type": "true-false",
       "options": [
         { "id": "true", "text": "测试可以证明程序有错误，但不能证明程序没有错误" },
@@ -118,21 +116,21 @@
     },
     {
       "id": "q9",
-      "abilityId": "embedded-c-programming",
-      "prompt": "以下代码违反了哪条常见的 C 语言代码规范？\n\nvoid process_data(int *ptr) {\n    *ptr = 42;\n}",
+      "abilityId": "java-programming",
+      "prompt": "以下 Java 代码违反了哪条常见编码规范？\n\npublic String getUserEmail(String userId) {\n    return userRepository.findById(userId).get().getEmail();\n}",
       "type": "single-choice",
       "options": [
-        { "id": "a", "text": "未检查指针是否为 NULL，可能导致段错误" },
-        { "id": "b", "text": "变量名不够长" },
-        { "id": "c", "text": "使用了魔法数字 42" },
-        { "id": "d", "text": "函数没有返回值类型" }
+        { "id": "a", "text": "未判空导致可能抛出 NullPointerException" },
+        { "id": "b", "text": "方法名过长" },
+        { "id": "c", "text": "缺少 import 语句" },
+        { "id": "d", "text": "没有使用设计模式" }
       ],
       "answer": "a",
-      "explanation": "MISRA C 规范要求在使用指针前必须进行 NULL 检查，否则解引用空指针会导致未定义行为（段错误/硬故障）。"
+      "explanation": "findById 返回 Optional，直接调用 get() 在记录不存在时会抛出 NoSuchElementException。应使用 orElse/orElseThrow 等安全方法，或使用 isEmpty() 做判空检查。这是 Java 编码中常见的空指针预防规范。"
     },
     {
       "id": "q10",
-      "abilityId": "engineering-communication",
+      "abilityId": "engineering-collaboration",
       "prompt": "代码审查（Code Review）时，发现同事的代码功能正确但缺少注释和错误处理。以下哪种反馈方式最专业？",
       "type": "single-choice",
       "options": [
@@ -147,29 +145,31 @@
   ],
   "scoringRules": [
     {
-      "abilityId": "embedded-c-programming",
-      "weakBelow": 2,
-      "feedback": "嵌入式 C 编程基础薄弱，需加强指针安全、代码规范和 Git 基本操作。"
-    },
-    {
-      "abilityId": "system-modeling",
-      "weakBelow": 2,
-      "feedback": "系统建模与需求分析能力不足，需学习用户故事编写和需求优先级管理方法。"
-    },
-    {
-      "abilityId": "embedded-interface-comm",
-      "weakBelow": 2,
-      "feedback": "接口设计与通信协议理解不够扎实，需复习 I2C/SPI/UART 原理和接口封装规范。"
-    },
-    {
-      "abilityId": "embedded-debugging",
-      "weakBelow": 2,
-      "feedback": "调试与测试能力有待提升，需练习边界值分析、等价类划分和单元测试编写。"
-    },
-    {
-      "abilityId": "engineering-communication",
+      "abilityId": "java-programming",
       "weakBelow": 1,
-      "feedback": "工程表达与协作沟通能力需要加强，需学习 Code Review 规范和工程文档写作。"
+      "feedback": "Java 编程基础薄弱，需加强编码规范、空指针预防和单元测试技能。"
+    },
+    {
+      "abilityId": "system-design",
+      "weakBelow": 2,
+      "feedback": "系统设计与需求分析能力不足，需学习用户故事编写、需求优先级管理和 RESTful API 设计规范。"
+    },
+    {
+      "abilityId": "database-design",
+      "weakBelow": 1,
+      "feedback": "数据库知识不够扎实，需复习数据库连接配置和常见异常排查方法。"
+    },
+    {
+      "abilityId": "engineering-collaboration",
+      "weakBelow": 2,
+      "feedback": "工程协作与沟通能力有待提升，需学习 Git 团队协作流程、测试质量意识和 Code Review 规范。"
+    }
+  ],
+  "sourceRefs": [
+    {
+      "type": "mock",
+      "title": "软件工程专业项目开发基础诊断模拟数据",
+      "note": "第一期用于演示诊断测验闭环，题目基于软件工程常见知识点编写，不代表真实认证考试。"
     }
   ]
 }
