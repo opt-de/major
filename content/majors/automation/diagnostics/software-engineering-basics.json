@@ -1,0 +1,173 @@
+{
+  "id": "software-engineering-basics",
+  "majorId": "automation",
+  "jobId": "embedded-software-engineer",
+  "title": "软件工程专业基础诊断",
+  "questions": [
+    {
+      "id": "q1",
+      "abilityId": "embedded-c-programming",
+      "prompt": "在 Git 中，哪个命令用于将当前修改暂存到暂存区？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "git add <file>" },
+        { "id": "b", "text": "git commit <file>" },
+        { "id": "c", "text": "git push <file>" },
+        { "id": "d", "text": "git branch <file>" }
+      ],
+      "answer": "a",
+      "explanation": "git add 将工作区的文件变更添加到暂存区，是提交前的必要步骤。git commit 才是真正创建提交。"
+    },
+    {
+      "id": "q2",
+      "abilityId": "embedded-c-programming",
+      "prompt": "团队开发中，发现远程分支有新的提交但本地没有，应该使用哪个命令同步？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "git status" },
+        { "id": "b", "text": "git fetch && git merge origin/main" },
+        { "id": "c", "text": "git clone" },
+        { "id": "d", "text": "git init" }
+      ],
+      "answer": "b",
+      "explanation": "git fetch 拉取远程更新但不合并，git merge 将远程分支合并到当前分支。这是团队协作的标准同步流程。"
+    },
+    {
+      "id": "q3",
+      "abilityId": "system-modeling",
+      "prompt": "需求分析阶段，以下哪项做法最能帮助准确理解客户需求？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "直接开始编写代码，边写边调整" },
+        { "id": "b", "text": "与客户共同编写用户故事和验收标准" },
+        { "id": "c", "text": "仅凭经验推测客户想要什么" },
+        { "id": "d", "text": "复制上一个项目的代码稍作修改" }
+      ],
+      "answer": "b",
+      "explanation": "用户故事（User Story）和验收标准（Acceptance Criteria）能将模糊需求转化为可验证的具体描述，减少沟通偏差。"
+    },
+    {
+      "id": "q4",
+      "abilityId": "system-modeling",
+      "prompt": "以下关于需求优先级划分的说法，正确的是？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "所有需求同等重要，应按顺序逐一实现" },
+        { "id": "b", "text": "使用 MoSCoW 法则（Must/Should/Could/Won't）进行优先级排序" },
+        { "id": "c", "text": "只关注客户口头提到的需求，忽略文档" },
+        { "id": "d", "text": "由开发人员自行决定哪些需求重要" }
+      ],
+      "answer": "b",
+      "explanation": "MoSCoW 法则是经典的需求优先级管理方法：Must（必须有）、Should（应该有）、Could（可以有）、Won't（本次不做）。"
+    },
+    {
+      "id": "q5",
+      "abilityId": "embedded-interface-comm",
+      "prompt": "设计一个传感器数据采集接口时，以下哪个做法最符合接口设计规范？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "直接在主循环中调用传感器读取函数，不封装" },
+        { "id": "b", "text": "定义统一的 read_sensor(sensor_id, buffer, len) 函数并声明头文件" },
+        { "id": "c", "text": "将传感器驱动代码全部写在 main.c 中" },
+        { "id": "d", "text": "使用全局变量传递传感器数据，不通过函数参数" }
+      ],
+      "answer": "b",
+      "explanation": "良好的接口设计应封装实现细节，提供清晰的函数签名和头文件声明，便于单元测试和模块复用。"
+    },
+    {
+      "id": "q6",
+      "abilityId": "embedded-interface-comm",
+      "prompt": "在嵌入式系统中，I2C 总线上两个设备通信失败，最可能的原因是？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "设备的 I2C 地址配置不一致或上拉电阻缺失" },
+        { "id": "b", "text": "CPU 主频过高" },
+        { "id": "c", "text": "Flash 存储空间不足" },
+        { "id": "d", "text": "电源电压偏高 0.1V" }
+      ],
+      "answer": "a",
+      "explanation": "I2C 通信依赖正确的从机地址匹配和总线上拉电阻维持信号电平，地址不匹配或上拉缺失是最常见的通信故障原因。"
+    },
+    {
+      "id": "q7",
+      "abilityId": "embedded-debugging",
+      "prompt": "对以下函数进行单元测试，哪个测试用例最能发现边界问题？\n\nint clamp(int value, int min, int max) {\n    if (value < min) return min;\n    if (value > max) return max;\n    return value;\n}",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "仅测试 value 在 min 和 max 之间的正常值" },
+        { "id": "b", "text": "测试 value == min、value == max、value < min、value > max、value == INT_MIN 和 value == INT_MAX" },
+        { "id": "c", "text": "只测试 value > max 的情况" },
+        { "id": "d", "text": "测试不同的 min 和 max 变量名组合" }
+      ],
+      "answer": "b",
+      "explanation": "边界值分析和等价类划分是发现边缘问题的关键：需覆盖等于边界、超出边界以及整型极值等情况。"
+    },
+    {
+      "id": "q8",
+      "abilityId": "embedded-debugging",
+      "prompt": "以下关于软件测试的说法，错误的是？",
+      "type": "true-false",
+      "options": [
+        { "id": "true", "text": "测试可以证明程序有错误，但不能证明程序没有错误" },
+        { "id": "false", "text": "100% 的代码覆盖率可以保证程序完全没有缺陷" }
+      ],
+      "answer": "false",
+      "explanation": "即使达到 100% 代码覆盖率，仍可能存在逻辑错误、竞态条件、边界条件遗漏等缺陷。测试只能发现缺陷，不能证明无缺陷。"
+    },
+    {
+      "id": "q9",
+      "abilityId": "embedded-c-programming",
+      "prompt": "以下代码违反了哪条常见的 C 语言代码规范？\n\nvoid process_data(int *ptr) {\n    *ptr = 42;\n}",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "未检查指针是否为 NULL，可能导致段错误" },
+        { "id": "b", "text": "变量名不够长" },
+        { "id": "c", "text": "使用了魔法数字 42" },
+        { "id": "d", "text": "函数没有返回值类型" }
+      ],
+      "answer": "a",
+      "explanation": "MISRA C 规范要求在使用指针前必须进行 NULL 检查，否则解引用空指针会导致未定义行为（段错误/硬故障）。"
+    },
+    {
+      "id": "q10",
+      "abilityId": "engineering-communication",
+      "prompt": "代码审查（Code Review）时，发现同事的代码功能正确但缺少注释和错误处理。以下哪种反馈方式最专业？",
+      "type": "single-choice",
+      "options": [
+        { "id": "a", "text": "直接强制合并，不提出任何意见" },
+        { "id": "b", "text": "在 PR 中逐条列出改进建议，说明缺少注释和错误处理可能带来的维护风险，并提供修改示例" },
+        { "id": "c", "text": "在群里公开批评代码质量差" },
+        { "id": "d", "text": "自己默默重写整个模块，不通知原作者" }
+      ],
+      "answer": "b",
+      "explanation": "专业的 Code Review 应具体指出问题、说明风险原因、提供可操作的改进建议，并保持尊重和建设性的语气。"
+    }
+  ],
+  "scoringRules": [
+    {
+      "abilityId": "embedded-c-programming",
+      "weakBelow": 2,
+      "feedback": "嵌入式 C 编程基础薄弱，需加强指针安全、代码规范和 Git 基本操作。"
+    },
+    {
+      "abilityId": "system-modeling",
+      "weakBelow": 2,
+      "feedback": "系统建模与需求分析能力不足，需学习用户故事编写和需求优先级管理方法。"
+    },
+    {
+      "abilityId": "embedded-interface-comm",
+      "weakBelow": 2,
+      "feedback": "接口设计与通信协议理解不够扎实，需复习 I2C/SPI/UART 原理和接口封装规范。"
+    },
+    {
+      "abilityId": "embedded-debugging",
+      "weakBelow": 2,
+      "feedback": "调试与测试能力有待提升，需练习边界值分析、等价类划分和单元测试编写。"
+    },
+    {
+      "abilityId": "engineering-communication",
+      "weakBelow": 1,
+      "feedback": "工程表达与协作沟通能力需要加强，需学习 Code Review 规范和工程文档写作。"
+    }
+  ]
+}
