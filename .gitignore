@@ -34,7 +34,6 @@ pnpm-debug.log*
 
 # local agent state
 .codex/
-.serena/
 
 # repo-local Buddy skills are replaced by global skills
 .agents/skills/openspec-buddy*

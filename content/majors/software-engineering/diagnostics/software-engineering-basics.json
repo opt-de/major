@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "software-engineering-basics",
   "majorId": "software-engineering",
   "jobId": "backend-developer",
@@ -117,7 +117,7 @@
     {
       "id": "q9",
       "abilityId": "java-programming",
-      "prompt": "以下 Java 代码违反了哪条常见编码规范？\n\npublic String getUserEmail(String userId) {\n    return userRepository.findById(userId).get().getEmail();\n}",
+      "prompt": "以下 Java 代码违反了哪条常见编码规范？\n\npublic String getUserEmail(String userId) {\n    User user = userRepository.findById(userId).orElse(null);\n    return user.getEmail();\n}",
       "type": "single-choice",
       "options": [
         { "id": "a", "text": "未判空导致可能抛出 NullPointerException" },
@@ -126,7 +126,7 @@
         { "id": "d", "text": "没有使用设计模式" }
       ],
       "answer": "a",
-      "explanation": "findById 返回 Optional，直接调用 get() 在记录不存在时会抛出 NoSuchElementException。应使用 orElse/orElseThrow 等安全方法，或使用 isEmpty() 做判空检查。这是 Java 编码中常见的空指针预防规范。"
+      "explanation": "orElse(null) 会返回 null 引用，此时在 null 上调用 .getEmail() 会抛出 NullPointerException。应使用 orElseThrow 或 inPresent 回调安全获取结果。这是 Java 编码中常见的空指针预防规范。"
     },
     {
       "id": "q10",

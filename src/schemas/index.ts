@@ -61,13 +61,6 @@ export const abilitySchema = z.object({
   sourceRefs: z.array(sourceRefSchema).min(1),
 });
 
-export const commonErrorSchema = z.object({
-  error: z.string().min(1),
-  symptoms: z.string().min(1),
-  diagnosis: z.string().min(1),
-  fix: z.string().min(1),
-});
-
 export const learningTaskSchema = z.object({
   id: z.string().min(1),
   majorId: z.string().min(1),
@@ -79,7 +72,6 @@ export const learningTaskSchema = z.object({
   steps: z.array(z.string().min(1)).min(1),
   deliverables: z.array(z.string().min(1)).min(1),
   rubric: z.array(rubricItemSchema).min(1),
-  commonErrors: z.array(commonErrorSchema).min(1).optional(),
   safetyOrEthicsNotes: z.array(z.string().min(1)),
   estimatedTime: z.string().min(1),
   sourceRefs: z.array(sourceRefSchema).min(1),
@@ -96,7 +88,6 @@ export const diagnosticQuestionSchema = z.object({
   })).min(2),
   answer: z.string().min(1),
   explanation: z.string().min(1),
-  difficulty: z.enum(['basic', 'intermediate', 'advanced']).optional(),
 });
 
 export const scoringRuleSchema = z.object({
@@ -112,7 +103,6 @@ export const diagnosticSchema = z.object({
   title: z.string().min(1),
   questions: z.array(diagnosticQuestionSchema).min(1),
   scoringRules: z.array(scoringRuleSchema).min(1),
-  sourceRefs: z.array(sourceRefSchema).min(1),
 });
 
 export const resourceSchema = z.object({
@@ -139,7 +129,6 @@ export const learningPathSchema = z.object({
   title: z.string().min(1),
   targetLevel: z.enum(['starter', 'project-ready', 'job-ready']),
   nodes: z.array(learningPathNodeSchema).min(1),
-  sourceRefs: z.array(sourceRefSchema).min(1),
 });
 
 export const contributorSchema = z.object({

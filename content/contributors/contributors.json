@@ -1,3 +1,13 @@
 {
-  "contributors": []
+  "contributors": [
+    {
+      "id": "myn111",
+      "displayName": "myn111",
+      "githubId": "myn111",
+      "contributionTypes": ["content-pack"],
+      "relatedIssues": ["#27"],
+      "relatedPullRequests": ["#74"],
+      "summary": "为软件工程专业新增10道项目开发基础诊断题，覆盖Git、需求分析、接口设计、测试和代码规范；补充learningPathId字段，修复JSON格式问题。"
+    }
+  ]
 }
